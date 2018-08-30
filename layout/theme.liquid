@@ -34,8 +34,9 @@
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
 
-  {% include 'google-fonts' %}
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,600,700|Muli:300,400,400i,600,700,800,900" rel="stylesheet">
 
   <script>
     window.theme = window.theme || {};

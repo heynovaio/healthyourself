@@ -319,46 +319,19 @@ $successGreenBg: #ecfef0;
 $passwordPageUseBgImage: true;
 
 /*================ Typography variables ================*/
-{% if settings.type_base_family contains 'Google' %}
-  {% assign type_base_parts = settings.type_base_family | split: '_' %}
-  {% assign type_base_name = type_base_parts[1] %}
-  {% capture base_family %}"{{ type_base_name | split: ':' | first | replace: '+', ' ' }}"{% if type_base_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-{% else %}
-  {% assign base_family = settings.type_base_family %}
-{% endif %}
-
-{% if settings.type_header_family contains 'Google' %}
-  {% assign type_header_parts = settings.type_header_family | split: '_' %}
-  {% assign type_header_name = type_header_parts[1] %}
-  {% capture header_family %}"{{ type_header_name | split: ':' | first | replace: '+', ' ' }}"{% if type_header_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-  {% assign header_weight = type_header_parts[2] %}
-{% else %}
-  {% assign header_family = settings.type_header_family %}
-  {% assign header_weight = 700 %}
-{% endif %}
-
-{% if settings.type_accent_family contains 'Google' %}
-  {% assign type_accent_parts = settings.type_accent_family | split: '_' %}
-  {% assign type_accent_name = type_accent_parts[1] %}
-  {% capture accent_family %}"{{ type_accent_name | split: ':' | first | replace: '+', ' ' }}"{% if type_accent_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-  {% assign accent_weight = type_accent_parts[2] %}
-{% else %}
-  {% assign accent_family = settings.type_accent_family %}
-  {% assign accent_weight = 400 %}
-{% endif %}
 
 // Body Font
-$bodyFontStack: {{ base_family }};
+$bodyFontStack: 'Muli', sans-serif;
 $baseFontSize: {{ settings.type_base_size }};
 
 // Header Font
-$headerFontStack: {{ header_family }};
-$headerFontWeight: {{ header_weight }};
+$headerFontStack: 'Cabin', sans-serif;
+$headerFontWeight: 700;
 $headerBaseFontSize: {{ settings.type_header_size }};
 
 // Navigation and buttons
-$accentFontStack: {{ accent_family }};
-$accentFontWeight: {{ accent_weight }};
+$accentFontStack: 'Cabin', sans-serif;
+$accentFontWeight: 600;
 $accentFontSize: {{ settings.type_accent_size }};
 
 // Header type settings
@@ -1802,7 +1775,7 @@ $socialIconFontStack: "icons";
   @include at-query($min, $medium) {
     input {
       max-width: 250px;
-    }   
+    }
   }
 
   .text-center input {
@@ -2166,11 +2139,10 @@ $socialIconFontStack: "icons";
 
 /*================ Module | Site Header ================*/
 .site-header {
-  padding: 40px 0;
+
   background-color: $colorHeader;
 
   @include at-query ($min, $large) {
-    padding: $gutter 0;
 
     .post-large--display-table {
       min-height: 86px;
@@ -2279,7 +2251,6 @@ $socialIconFontStack: "icons";
   text-decoration: none;
   white-space: nowrap;
   color: $colorNavText;
-  background-color: $colorBody;
   font-weight: normal;
   padding: 7px 20px 7px 15px;
 

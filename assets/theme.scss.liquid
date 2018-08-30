@@ -864,7 +864,7 @@ h6 {
 @if ($colorBody == $colorFooterBg) or ($colorFooterBg == rgba(0,0,0,0))  {
   .main-content {
     padding-bottom: 0;
-    
+
     &:after {
       content: '';
       display: block;
@@ -911,8 +911,8 @@ h6 {
   font-family: $accentFontStack;
   font-size: em(14px);
   font-weight: 400;
-  background-color: $colorTopBar;
-  color: $colorTopBarText;
+  background: transparent;
+  color: $colorTopBar;
   padding-top: 2px;
   padding-bottom: 2px;
   text-align: center;
@@ -925,7 +925,7 @@ h6 {
 
   a,
   button {
-    color: $colorTopBarText;
+    color: #fff;
 
     &:hover,
     &:active,
@@ -946,11 +946,11 @@ h6 {
 @include at-query($min, $large) {
   .header-bar__left {
     text-align: left;
-    width: 33.33%;
+    width: 53.33%;
   }
 
   .header-bar__right {
-    width: 66.66%;
+    width: 46.66%;
   }
 }
 
@@ -1049,7 +1049,7 @@ h6 {
   width: 60%;
   float: right;
   background: transparent;
-  border-color: transparent;
+  border-color: #2d4276;
   padding: 5px 0;
 
   &:focus {
@@ -1457,7 +1457,7 @@ $badgeSize: 60px;
   .input-group {
     display: block;
   }
-  
+
   .input-group-field {
     margin-bottom: 10px;
   }
