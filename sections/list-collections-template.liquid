@@ -22,39 +22,41 @@
 {% endcase %}
 
 <div class="grid-uniform" data-section-id="{{ section.id }}" data-section-type="list-collections-template">
+  <div class="wrapper">
 
-  {% if section.settings.display_type == 'all' %}
-    {% case section.settings.sort %}
-      {% when 'products_high' or 'products_low' %}
-        {%- assign list_collections = collections | sort: 'all_products_count' -%}
-      {% when 'date' or 'date_reversed' %}
-        {%- assign list_collections = collections | sort: 'published_at' -%}
+    {% if section.settings.display_type == 'all' %}
+      {% case section.settings.sort %}
+        {% when 'products_high' or 'products_low' %}
+          {%- assign list_collections = collections | sort: 'all_products_count' -%}
+        {% when 'date' or 'date_reversed' %}
+          {%- assign list_collections = collections | sort: 'published_at' -%}
+        {% else %}
+          {%- assign list_collections = collections -%}
+      {% endcase %}
+      {% if section.settings.sort == 'products_low' or section.settings.sort == 'date' or section.settings.sort == 'alphabetical' %}
+        {% for collection in list_collections %}
+          {% assign featured = collection.handle %}
+          <div class="grid__item {{collection_item_width}} text-center">
+            {% include 'collection-grid-item' with collection_width: collection_width %}
+          </div>
+        {% endfor %}
       {% else %}
-        {%- assign list_collections = collections -%}
-    {% endcase %}
-    {% if section.settings.sort == 'products_low' or section.settings.sort == 'date' or section.settings.sort == 'alphabetical' %}
-      {% for collection in list_collections %}
-        {% assign featured = collection.handle %}
-        <div class="grid__item {{collection_item_width}} text-center">
-          {% include 'collection-grid-item' with collection_width: collection_width %}
-        </div>
-      {% endfor %}
+        {% for collection in list_collections reversed %}
+          {% assign featured = collection.handle %}
+          <div class="grid__item {{collection_item_width}} text-center">
+            {% include 'collection-grid-item' with collection_width: collection_width %}
+          </div>
+        {% endfor %}
+      {% endif %}
     {% else %}
-      {% for collection in list_collections reversed %}
-        {% assign featured = collection.handle %}
+      {% for block in section.blocks %}
+        {% assign featured = collections[block.settings.collection].handle %}
         <div class="grid__item {{collection_item_width}} text-center">
           {% include 'collection-grid-item' with collection_width: collection_width %}
         </div>
       {% endfor %}
     {% endif %}
-  {% else %}
-    {% for block in section.blocks %}
-      {% assign featured = collections[block.settings.collection].handle %}
-      <div class="grid__item {{collection_item_width}} text-center">
-        {% include 'collection-grid-item' with collection_width: collection_width %}
-      </div>
-    {% endfor %}
-  {% endif %}
+  </div>
 </div>
 
 {% schema %}

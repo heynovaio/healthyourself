@@ -75,9 +75,7 @@
         {% endif %}
 
         <div class="header-bar__right post-large--display-table-cell">
-
           {% if shop.customer_accounts_enabled %}
-          <div class="wrapper">
             <ul class="header-bar__module header-bar__module--list">
               {% if customer %}
                 <li>
@@ -96,7 +94,6 @@
                 </li>
               {% endif %}
             </ul>
-          </div>
           {% endif %}
 
           <div class="header-bar__module cart-container">
@@ -157,7 +154,7 @@
         <div class="grid--full medium-down--hide">
           <div class="grid__item">
             <div class="wrapper">
-              <a href="#" class="logo-title">Health Yourself Today</a>
+              <a href="/" class="logo-title">Health Yourself Today</a>
             {% include 'site-nav' with linklists[section.settings.nav_menu] %}
             </div>
           </div>
@@ -201,7 +198,7 @@
           </div>
           <div class="grid__item post-large--two-thirds post-large--display-table-cell medium-down--hide">
             <div class="wrapper">
-              <a href="#" class="logo-title">Health Yourself Today</a>
+              <a href="/" class="logo-title">Health Yourself Today</a>
             {% include 'site-nav' with linklists[section.settings.nav_menu] %}
             </div>
           </div>

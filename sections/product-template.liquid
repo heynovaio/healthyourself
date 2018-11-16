@@ -1,5 +1,5 @@
 <div itemscope itemtype="http://schema.org/Product" id="ProductSection" data-section-id="{{ section.id }}" data-section-type="product-template" data-image-zoom-type="{{ section.settings.product_image_zoom_type }}" data-related-enabled="{{ section.settings.product_related_enable }}" data-show-extra-tab="{{ section.settings.show_extra_tab }}" data-extra-tab-content="{{ section.settings.extra_tab_content }}" data-enable-history-state="true">
-
+<div class="wrapper">
   {% case section.settings.add_to_cart_width %}
     {% when 'small' %}
       {%- assign btn_class = 'btn' -%}
@@ -153,7 +153,7 @@
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
-          <div class="product-single__prices">    
+          <div class="product-single__prices">
             <span id="PriceA11y" class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
             <span id="ProductPrice" class="product-single__price" itemprop="price" content="{{ product.price | divided_by: 100.00 }}">
               {{ product.price | money }}
@@ -238,7 +238,7 @@
   {% if section.settings.product_related_enable %}
     {% include 'related-products' %}
   {% endif %}
-
+  </div>
 </div>
 
 {% unless product == empty %}

@@ -3,7 +3,8 @@
 {% assign rows = section.settings.num_rows %}
 {% assign total_products = products_per_row | times: rows %}
 
-<div data-section-id="{{ section.id }}" data-section-type="featured-products-section">
+<div data-section-id="{{ section.id }}" class="featured-products" data-section-type="featured-products-section">
+
   {% unless section.settings.title == blank %}
   <div class="section-header section-header--small">
     <h2 class="section-header__title">
@@ -44,9 +45,11 @@
                     </span>
                   </span>
                   <p class="grid-link__title">{{ 'home_page.onboarding.product_title' | t }}</p>
+
                   <p class="grid-link__meta">
                     <strong>$19.99</strong>
                   </p>
+
                 </a>
               </div>
             {% endfor %}
@@ -56,6 +59,7 @@
     {% endfor %}
   </div>
 </div>
+
 
 {% schema %}
   {

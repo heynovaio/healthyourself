@@ -4,6 +4,7 @@
 
 {% endcomment %}
 <div id="CartSection" data-section-id="{{ section.id }}" data-section-type="cart-template" data-notes-enable="{{ section.settings.cart_notes_enable }}">
+  <div class="wrapper">
   {% if cart.item_count > 0 %}
 
     <form action="/cart" method="post" novalidate class="cart">
@@ -208,6 +209,7 @@
     </div>
     <p class="cart__continue-btn">{{ 'cart.general.continue_browsing_html' | t }}</p>
   {% endif %}
+  </div>
 </div>
 
 {% schema %}
