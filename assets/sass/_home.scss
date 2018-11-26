@@ -81,6 +81,7 @@ h2.section-header__title {
 }
 .grid-uniform {
 	display: flex;
+  flex-wrap: wrap;
 	.grid__item {
 		flex: 1 auto;
 	}
@@ -94,12 +95,9 @@ h2.section-header__title {
   color: #6b747e;
 }
 .grid-link__title {
-	font-weight: 800;
+	font-weight: 600;
 }
-p.grid-link__meta::first-letter {
-  font-size: 20px;
-  color: #cdd2d2;
-  padding-right: 4px;
+
 }
 .grid__item .item-container {
   height: 100%;

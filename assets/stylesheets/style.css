@@ -1,453 +1,66 @@
-/* line 4, ../sass/_header.scss */
-.main-content {
-  padding-top: 145px;
-}
+/*
+Error: Invalid CSS after "}": expected selector or at-rule, was "}"
+        on line 101 of /Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/_home.scss
+        from line 4 of /Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/style.scss
 
-/* line 7, ../sass/_header.scss */
-.site-header {
-  background: #2d4276;
-  padding: 15px 0;
-}
-/* line 8, ../sass/_header.scss */
-.site-header a {
-  color: #fff;
-}
+96: }
+97: .grid-link__title {
+98: 	font-weight: 600;
+99: }
+100: 
+101: }
+102: .grid__item .item-container {
+103:   height: 100%;
+104:   position: relative;
+105:   text-align: right;
+106: }
 
-/* line 14, ../sass/_header.scss */
-.site-nav__dropdown-grandchild,
-.site-nav__dropdown {
-  background: #2d4276;
-}
-
-/* line 18, ../sass/_header.scss */
-.site-nav__link .icon-arrow-down {
-  color: #fff;
-}
-
-/* line 21, ../sass/_header.scss */
-.site-nav {
-  letter-spacing: 0;
-}
-
-/* line 24, ../sass/_header.scss */
-.site-nav__link:hover,
-.site-nav__link:active,
-.site-nav__link:focus {
-  color: #c5dfcf;
-}
-
-/* line 29, ../sass/_header.scss */
-.header-bar__right {
-  color: #2d4276;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* line 35, ../sass/_header.scss */
-.site-header__logo {
-  margin-top: 60px;
-}
-/* line 37, ../sass/_header.scss */
-.site-header__logo a {
-  letter-spacing: -.05em;
-  text-align: left;
-}
-
-/* line 42, ../sass/_header.scss */
-.header-bar a, .header-bar button {
-  color: #2d4276;
-  font-weight: 600;
-}
-
-/* line 46, ../sass/_header.scss */
-.header-bar__module {
-  font-weight: 600;
-}
-
-/* line 49, ../sass/_header.scss */
-.supports-fontface .header-bar__search-input[type="search"] {
-  font-weight: 600;
-}
-
-/* line 52, ../sass/_header.scss */
-.top-banner {
-  height: 600px;
-  overflow: hidden;
-}
-
-/* line 56, ../sass/_header.scss */
-#shopify-section-header {
-  position: fixed;
-  z-index: 3;
-  top: 0;
-}
-
-/* line 61, ../sass/_header.scss */
-.banner-bg {
-  background: url("banner-bg-i.jpg") no-repeat right bottom;
-  background-size: 100% auto;
-  background-color: #80bdbd;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 62%;
-  z-index: 0;
-}
-
-/* line 72, ../sass/_header.scss */
-.index-section.shopify-section {
-  background: #fff;
-  padding-top: 0;
-}
-
-/* line 76, ../sass/_header.scss */
-.shopify-section {
-  position: relative;
-  z-index: 1;
-}
-
-/* line 80, ../sass/_header.scss */
-.site-nav {
-  text-align: right;
-}
-
-/* line 86, ../sass/_header.scss */
-.cart-container {
-  background: #ffcd2f;
-  padding: 11px 25px 11px 20px;
-  margin: -2px 0 -8px 20px;
-  font-size: 18px;
-}
-
-/* line 92, ../sass/_header.scss */
-.header-bar {
-  padding-top: 19px;
-  padding-bottom: 19px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-/* line 97, ../sass/_header.scss */
-.header-bar__search {
-  margin-top: -8px;
-  margin-bottom: -7px;
-  position: absolute;
-  right: 124px;
-  top: 7px;
-}
-
-/* line 104, ../sass/_header.scss */
-.supports-fontface .header-bar__search-submit {
-  width: 27%;
-}
-
-/* line 107, ../sass/_header.scss */
-.search-bar {
-  max-width: 535px;
-}
-
-/* line 110, ../sass/_header.scss */
-input.header-bar__search-input {
-  padding: 19px 0 19px 39px;
-  border-radius: 0;
-  border: none;
-  font-size: 18px;
-}
-
-/* line 116, ../sass/_header.scss */
-.header-bar__module.cart-container {
-  text-transform: uppercase;
-}
-
-/* line 119, ../sass/_header.scss */
-.site-header a.logo-title {
-  color: #c5dfcf;
-  position: absolute;
-  left: 30px;
-  font-weight: 700;
-  font-size: 24px;
-  font-family: 'Cabin';
-}
-
-/* line 128, ../sass/_header.scss */
-.site-header .wrapper {
-  position: relative;
-}
-
-/* line 132, ../sass/_header.scss */
-.top-banner {
-  margin-bottom: 30px;
-  z-index: 1;
-}
-/* line 135, ../sass/_header.scss */
-.top-banner .h1 {
-  position: relative;
-  z-index: 1;
-  padding-top: 40px;
-}
-/* line 140, ../sass/_header.scss */
-.top-banner h1 {
-  font-size: 70px;
-  line-height: 1.2;
-  text-align: left;
-  max-width: 720px;
-  color: #2d4276;
-}
-/* line 147, ../sass/_header.scss */
-.top-banner h1 a {
-  display: block;
-  margin: 50px 0;
-  color: #2d4276;
-}
-/* line 154, ../sass/_header.scss */
-.top-banner p {
-  max-width: 450px;
-  font-size: 20px;
-  text-align: left;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-/* line 1, ../sass/_footer.scss */
-.site-footer h3.h4 {
-  font-size: 18px;
-}
-
-/* line 1, ../sass/_home.scss */
-h2.section-header__title {
-  text-align: center;
-  margin-bottom: 45px;
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-}
-
-/* line 8, ../sass/_home.scss */
-.top-banner .search-bar input[type="search"] {
-  border: 1px solid #2d4276;
-  font-size: 24px;
-  padding: 10px 12px 11px;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  border-right: 0;
-}
-
-/* line 17, ../sass/_home.scss */
-.search-bar button.btn.icon-fallback-text {
-  height: auto;
-  padding: 9px 16px 7px;
-  background-color: #2d4276;
-  color: #fff;
-}
-/* line 22, ../sass/_home.scss */
-.search-bar button.btn.icon-fallback-text:hover {
-  background-color: #ffcd2f;
-  color: #2d4276;
-}
-
-/* line 27, ../sass/_home.scss */
-.featured-products {
-  background: #f3f4f7;
-  padding: 50px 6px 66px;
-}
-/* line 30, ../sass/_home.scss */
-.featured-products h2 {
-  text-align: center;
-  margin-bottom: 45px;
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-}
-/* line 37, ../sass/_home.scss */
-.featured-products .item-container {
-  background: #fff;
-  margin: 0 6px;
-  transition: all .25s;
-}
-/* line 42, ../sass/_home.scss */
-.featured-products .item-container:hover {
-  margin-top: -5px;
-  margin-bottom: 5px;
-}
-/* line 45, ../sass/_home.scss */
-.featured-products .item-container:hover a::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #69e2e2;
-  opacity: .25;
-  content: '';
-}
-/* line 55, ../sass/_home.scss */
-.featured-products .item-container:hover .grid-link__meta {
-  color: #2d4276;
-}
-/* line 60, ../sass/_home.scss */
-.featured-products .grid-link {
-  padding: 15px 10px 15px;
-  height: 100%;
-}
-/* line 64, ../sass/_home.scss */
-.featured-products .grid-link__image {
-  padding: 0 10px;
-}
-
-/* line 68, ../sass/_home.scss */
-.grid-link:hover .grid-link__image, .grid-link:active .grid-link__image, .grid-link--focus:hover .grid-link__image, .grid-link--focus:active .grid-link__image {
-  opacity: 1;
-}
-
-@media only screen and (min-width: 769px) {
-  /* line 72, ../sass/_home.scss */
-  .post-large--one-fifth {
-    padding-left: 0px;
-  }
-}
-/* line 76, ../sass/_home.scss */
-.grid, .grid--rev, .grid--full, .grid-uniform {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: 0px;
-}
-
-/* line 82, ../sass/_home.scss */
-.grid-uniform {
-  display: flex;
-}
-/* line 84, ../sass/_home.scss */
-.grid-uniform .grid__item {
-  flex: 1 auto;
-}
-
-/* line 88, ../sass/_home.scss */
-.grid-link__meta {
-  margin-bottom: 0;
-  padding: 5px 9px;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 600;
-  color: #6b747e;
-}
-
-/* line 96, ../sass/_home.scss */
-.grid-link__title {
-  font-weight: 800;
-}
-
-/* line 99, ../sass/_home.scss */
-p.grid-link__meta::first-letter {
-  font-size: 20px;
-  color: #cdd2d2;
-  padding-right: 4px;
-}
-
-/* line 104, ../sass/_home.scss */
-.grid__item .item-container {
-  height: 100%;
-  position: relative;
-  text-align: right;
-}
-
-/* line 109, ../sass/_home.scss */
-.buy-container {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  width: 100%;
-}
-
-/* line 115, ../sass/_home.scss */
-#AddToCartForm {
-  text-align: right;
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-/* line 120, ../sass/_home.scss */
-#AddToCart {
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  background: #ffcd2f;
-  color: #2d4276;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  padding: 6px 18px;
-}
-
-/* line 131, ../sass/_home.scss */
-.template-index .featured-blog {
-  padding-top: 50px;
-}
-/* line 133, ../sass/_home.scss */
-.template-index .featured-blog .grid__item {
-  padding-left: 0;
-}
-/* line 137, ../sass/_home.scss */
-.template-index .featured-blog__post {
-  text-align: center;
-}
-
-/* line 2, ../sass/_template_page.scss */
-.template-page .main-content {
-  padding-top: 185px;
-}
-
-/* line 6, ../sass/_template_page.scss */
-.breadcrumb a, .breadcrumb span {
-  font-size: 16px;
-}
-
-/* line 10, ../sass/_template_page.scss */
-.product-single .h3 {
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #6b747e;
-}
-/* line 15, ../sass/_template_page.scss */
-.product-single h1 {
-  margin-top: 14px;
-}
-/* line 18, ../sass/_template_page.scss */
-.product-single span#ProductPrice {
-  margin-bottom: 22px;
-  padding: 5px 9px 5px 0;
-  font-size: 24px;
-  text-align: left;
-  font-weight: 600;
-  color: #629c9c;
-  display: block;
-}
-/* line 27, ../sass/_template_page.scss */
-.product-single form#AddToCartForm {
-  margin-bottom: 40px;
-}
-/* line 30, ../sass/_template_page.scss */
-.product-single #AddToCart {
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  background: #ffcd2f;
-  color: #2d4276;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  padding: 14px 22px;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.010em;
-}
-/* line 43, ../sass/_template_page.scss */
-.product-single .grid__item {
-  padding-left: 0;
-  padding-right: 30px;
-}
-
-/* line 48, ../sass/_template_page.scss */
-.grid-link__title {
-  text-align: center;
-}
+Backtrace:
+/Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/_home.scss:101
+/Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/style.scss:4
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:42:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected selector or at-rule, was \"}\"\A         on line 101 of /Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/_home.scss\A         from line 4 of /Applications/XAMPP/xamppfiles/htdocs/healthyourself/assets/sass/style.scss\A \A 96: }\A 97: .grid-link__title {\A 98: 	font-weight: 600;\A 99: }\A 100: \A 101: }\A 102: .grid__item .item-container {\A 103:   height: 100%;\A 104:   position: relative;\A 105:   text-align: right;\A 106: }"; }
