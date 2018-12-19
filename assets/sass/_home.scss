@@ -80,8 +80,6 @@ h2.section-header__title {
     margin-left: 0px;
 }
 .grid-uniform {
-	display: flex;
-  flex-wrap: wrap;
 	.grid__item {
 		flex: 1 auto;
 	}
@@ -96,8 +94,6 @@ h2.section-header__title {
 }
 .grid-link__title {
 	font-weight: 600;
-}
-
 }
 .grid__item .item-container {
   height: 100%;
@@ -128,6 +124,9 @@ h2.section-header__title {
 .template-index {
 	.featured-blog {
 		padding-top: 50px;
+    .grid-uniform {
+      display: flex;
+    }
 		.grid__item {
 			padding-left: 0;
 		}
@@ -135,4 +134,13 @@ h2.section-header__title {
 	.featured-blog__post {
 		text-align: center;
 	}
+}
+/* responsive*/
+
+@media (max-width: 800px){
+  .featured-products {
+    .grid-uniform {
+    padding-right: 25px;
+    }
+  }
 }
