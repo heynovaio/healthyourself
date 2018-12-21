@@ -39,7 +39,7 @@
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="header-bar">
-    <div class="wrapper medium-down--hide">
+    <div class="medium-down--hide">
       <div class="post-large--display-table">
 
         {% if section.settings.show_announcement or section.settings.header_search_enable %}
@@ -75,7 +75,10 @@
         {% endif %}
 
         <div class="header-bar__right post-large--display-table-cell">
-          {% if shop.customer_accounts_enabled %}
+          <nav class="secondary-nav">
+            {% include 'site-nav' with linklists[section.settings.nav_menu_2] %}
+          </nav>
+{% comment %}          {% if shop.customer_accounts_enabled %}
             <ul class="header-bar__module header-bar__module--list">
               {% if customer %}
                 <li>
@@ -94,8 +97,7 @@
                 </li>
               {% endif %}
             </ul>
-          {% endif %}
-
+          {% endif %}{% endcomment %}
           <div class="header-bar__module cart-container">
             <span class="header-bar__sep" aria-hidden="true"></span>
             <a href="/cart" class="cart-page-link">
@@ -144,6 +146,7 @@
       </a>
     </div>
     {% include 'mobile-nav' with linklists[section.settings.nav_menu] %}
+
   </div>
 
   <header class="site-header" role="banner">
@@ -153,10 +156,33 @@
 
         <div class="grid--full medium-down--hide">
           <div class="grid__item">
-            <div class="wrapper">
-              <a href="/" class="logo-title">Health Yourself Today</a>
+
+              <a href="/" class="logo-title">
+              {% if section.settings.logo != blank %}
+                <noscript>
+                  {% capture image_size %}{{ logo_width | escape }}x{% endcapture %}
+                  <div class="logo__image-wrapper">
+                    {{ section.settings.logo | img_url: image_size | img_tag: shop.name }}
+                  </div>
+                </noscript>
+                <div class="logo__image-wrapper supports-js">
+                  <a href="/" itemprop="url" style="padding-top:{{ 1 | divided_by: section.settings.logo.aspect_ratio | times: 100}}%;">
+                    {% assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                    <img class="logo__image lazyload"
+                     src="{{ section.settings.logo | img_url: '300x300' }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[120, 180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                     data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
+                     data-sizes="auto"
+                     alt="{{ shop.name | escape }}"
+                     itemprop="logo">
+                  </a>
+                </div>
+              {% else %}
+                <a href="/" itemprop="url">{{ shop.name }}</a>
+              {% endif %}
+              </a>
             {% include 'site-nav' with linklists[section.settings.nav_menu] %}
-            </div>
           </div>
         </div>
       {% else %}
@@ -178,13 +204,13 @@
                   <a href="/" itemprop="url" style="padding-top:{{ 1 | divided_by: section.settings.logo.aspect_ratio | times: 100}}%;">
                     {% assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
                     <img class="logo__image lazyload"
-                         src="{{ section.settings.logo | img_url: '300x300' }}"
-                         data-src="{{ img_url }}"
-                         data-widths="[120, 180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-                         data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
-                         data-sizes="auto"
-                         alt="{{ shop.name | escape }}"
-                         itemprop="logo">
+                     src="{{ section.settings.logo | img_url: '300x300' }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[120, 180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                     data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
+                     data-sizes="auto"
+                     alt="{{ shop.name | escape }}"
+                     itemprop="logo">
                   </a>
                 </div>
               {% else %}
@@ -197,14 +223,39 @@
             {% endif %}
           </div>
           <div class="grid__item post-large--two-thirds post-large--display-table-cell medium-down--hide">
-            <div class="wrapper">
-              <a href="/" class="logo-title">Health Yourself Today</a>
-            {% include 'site-nav' with linklists[section.settings.nav_menu] %}
+            <div>
+              <a href="/" class="logo-title">
+              {% if section.settings.logo != blank %}
+                <noscript>
+                  {% capture image_size %}{{ logo_width | escape }}x{% endcapture %}
+                  <div class="logo__image-wrapper">
+                    {{ section.settings.logo | img_url: image_size | img_tag: shop.name }}
+                  </div>
+                </noscript>
+                <div class="logo__image-wrapper supports-js">
+                  <a href="/" itemprop="url" style="padding-top:{{ 1 | divided_by: section.settings.logo.aspect_ratio | times: 100}}%;">
+                    {% assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                    <img class="logo__image lazyload"
+                     src="{{ section.settings.logo | img_url: '300x300' }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[120, 180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                     data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
+                     data-sizes="auto"
+                     alt="{{ shop.name | escape }}"
+                     itemprop="logo">
+                  </a>
+                </div>
+              {% else %}
+                {% comment %}<a href="/" itemprop="url">{{ shop.name }}</a>{% endcomment %}
+              {% endif %}
+              </a>
+              <nav class="main-menu">
+                {% include 'site-nav' with linklists[section.settings.nav_menu] %}
+              </nav>
             </div>
           </div>
         </div>
       {% endif %}
-
     </div>
   </header>
 </div>
@@ -254,6 +305,15 @@
         "type": "checkbox",
         "id": "show_header_lines",
         "label": "Show divider lines in header"
+      },
+      {
+        "type": "header",
+        "content": "Secondary menu"
+      },
+      {
+        "type": "link_list",
+        "id": "nav_menu_2",
+        "label": "Menu"
       },
       {
         "type": "header",

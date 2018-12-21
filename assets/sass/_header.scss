@@ -1,5 +1,13 @@
+.wrapper {
+	@media only screen and (max-width: 769px){
+		padding: 0 20px;
+	}
+}
 .site-nav {
 
+}
+.secondary-nav {
+	display: inline-block;
 }
 .main-content {
 	padding-top: 145px;
@@ -8,12 +16,11 @@
 	a {
 		color: #fff;
 		}
-	background: $brandDark;
 	padding: 15px 0;
 }
 .site-nav__dropdown-grandchild,
 .site-nav__dropdown {
-  background: #2d4276;
+  background: $brandPrimary;
 }
 .site-nav__link .icon-arrow-down{
 	color: #fff;
@@ -27,7 +34,7 @@
   color: #c5dfcf;
 }
 .header-bar__right {
-	color: $brandDark;
+	color: $brandSecondary;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -40,11 +47,31 @@
 	}
 }
 .header-bar a, .header-bar button {
-	color: $brandDark;
+	color: $brandSecondary;
 	font-weight: 600;
 }
 .header-bar__module {
 	font-weight: 600;
+}
+.site-nav--active > .site-nav__link {
+	font-weight: 500;
+}
+/* secondary nav */
+.secondary-nav {
+	.site-nav__link:hover {
+		color: #559291;
+	}
+	#MenuParent-2 {
+		a {
+			color: #fff;
+			&:hover {
+				color: #c5dfcf;
+			}
+		}
+	}
+	.site-nav__link .icon-arrow-down {
+		color: #2d4276;
+	}
 }
 .supports-fontface .header-bar__search-input[type="search"] {
 	font-weight: 600;
@@ -80,19 +107,19 @@
 .site-nav {
 	text-align: right;
 }
-.site-header {
 
-}
 .cart-container {
-  background: #ffcd2f;
+  background: $brandSecondary;
   padding: 11px 25px 11px 20px;
   margin: -2px 0 -8px 20px;
   font-size: 18px;
+  a {
+  	color: #fff;
+  }
 }
 .header-bar {
-  padding-top: 19px;
-  padding-bottom: 19px;
-  background: rgba(255,255,255,0.7);
+  padding: 19px 20px;
+  background: #fff;
 }
 .header-bar__search {
 	margin-top: -8px;
@@ -101,11 +128,22 @@
   right: 124px;
   top: 7px;
 }
+.site-header {
+	background: $brandPrimary;
+	padding: 15px 20px;
+	@media only screen and (max-width: 769px){
+		display: none;
+	}
+}
+.site-nav__dropdown {
+	right: 0;
+	left: auto;
+}
 .supports-fontface .header-bar__search-submit {
   width: 27%;
 }
 .search-bar {
-  max-width: 535px;
+  max-width: 537px;
 }
 input.header-bar__search-input {
   padding: 19px 0 19px 39px;
@@ -142,13 +180,12 @@ input.header-bar__search-input {
 		line-height: 1.2;
     text-align: left;
     max-width: 720px;
-    color: $brandDark;
+    color: $brandSecondary;
     // text-transform: uppercase;
     a {
     	display: block;
     	margin: 50px 0;
-    color: $brandDark;
-
+    	color: $brandSecondary;
     }
 	}
 	p {

@@ -4,12 +4,11 @@
   More info on linklists:
     - http://docs.shopify.com/themes/liquid-variables/linklists
 {% endcomment %}
-<nav>
   <ul class="site-nav" id="AccessibleNav">
     {% for link in site-nav.links %}
       {% if link.links != blank %}
       {% assign parent_index = forloop.index %}
-        <li 
+        <li
           class="site-nav--has-dropdown {% if link.active %}site-nav--active{% endif %}"
           aria-haspopup="true">
           <a
@@ -48,7 +47,7 @@
                     data-meganav-dropdown>
                     {% for grandchildlink in childlink.links %}
                       <li{% if grandchildlink.active %} class="site-nav--active"{% endif %}>
-                        <a 
+                        <a
                           href="{{ grandchildlink.url }}"
                           class="site-nav__link"
                           data-meganav-type="child"
@@ -88,4 +87,3 @@
       {% endif %}
     {% endfor %}
   </ul>
-</nav>
