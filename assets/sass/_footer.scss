@@ -1,3 +1,16 @@
 .site-footer h3.h4 {
   font-size: 18px;
 }
+footer {
+	.grid-uniform {
+		@media only screen and (max-width: 769px){
+			display: block;
+		}
+	}
+	.grid-uniform .grid__item {
+		width: 100%;
+		display: block;
+		padding-left: 0;
+		text-align: center;
+	}
+}

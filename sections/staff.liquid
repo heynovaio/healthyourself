@@ -1,0 +1,69 @@
+<section class="staff">
+  <div class="wrapper">
+		<div class="steps {{ section.settings.layout }}">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+      <div class="col-3">
+      	{% for block in section.blocks %}
+      		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+	      	<div class="inner-col">
+            <div class="img-container">
+							<img src="{{ block.settings.stepImage | img_url: '300x300' }}"
+                 data-src="{{ img_url }}"
+                 alt="test">
+            </div>
+		        <p>{{ block.settings.randomstuff | escape }}</p>
+            <p>{{ block.settings.staff-desc | escape }}</p>
+
+		        {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
+			    </div>
+				{% endfor %}
+	    </div>
+	  </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Staff",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Steps",
+        "settings": [
+          {
+		        "type": "image_picker",
+		        "id": "stepImage",
+		        "label": "Step Graphic"
+		      },
+		      {
+		        "type": "text",
+		        "id": "randomstuff",
+		        "label": "Step Text",
+		        "default": "Text stuff"
+		      },
+          {
+            "type": "textarea",
+            "id": "staff-desc",
+            "label": "Staff Description",
+            "default": "Staff Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Staff",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

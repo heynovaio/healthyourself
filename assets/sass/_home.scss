@@ -6,9 +6,9 @@ h2.section-header__title {
   letter-spacing: -0.015em;
 }
 .top-banner .search-bar input[type="search"] {
-  border: 1px solid #2d4276;
-  font-size: 24px;
-  padding: 10px 12px 11px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  padding: 12px 15px 13px;
   height: auto;
   display: block;
   border-radius: 0;
@@ -53,7 +53,7 @@ h2.section-header__title {
 				content:'';
 	  	}
 	  	.grid-link__meta {
-	  		color: $brandDark;
+	  		color: $brandSecondary;
 	  	}
   	}
   }
@@ -80,6 +80,7 @@ h2.section-header__title {
     margin-left: 0px;
 }
 .grid-uniform {
+	display: flex;
 	.grid__item {
 		flex: 1 auto;
 	}
@@ -93,7 +94,12 @@ h2.section-header__title {
   color: #6b747e;
 }
 .grid-link__title {
-	font-weight: 600;
+	font-weight: 800;
+}
+p.grid-link__meta::first-letter {
+  font-size: 20px;
+  color: #cdd2d2;
+  padding-right: 4px;
 }
 .grid__item .item-container {
   height: 100%;
@@ -116,7 +122,7 @@ h2.section-header__title {
 	outline: none;
 	-webkit-appearance: none;
   background: $brandCTA;
-  color: $brandDark;
+  color: $brandSecondary;
   font-weight: 700;
   letter-spacing: -0.05em;
   padding: 6px 18px;
@@ -135,6 +141,7 @@ h2.section-header__title {
 		text-align: center;
 	}
 }
+
 /* responsive*/
 
 @media (max-width: 800px){

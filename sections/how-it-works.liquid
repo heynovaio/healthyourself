@@ -1,0 +1,70 @@
+<section class="how-it-works">
+  <div class="wrapper">
+		<div class="steps">
+    	{% if section.settings.subtitle != blank %}
+        <p class="subtitle">{{ section.settings.subtitle | escape }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+      <div class="col-3">
+      	{% for block in section.blocks %}
+      		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+	      	<div class="inner-col">
+            <div class="img-container">
+							<img src="{{ block.settings.stepImage | img_url: '300x300' }}"
+                 data-src="{{ img_url }}"
+                 alt="test">
+            </div>
+		        <p>{{ block.settings.randomstuff | escape }}</p>
+		        {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
+			    </div>
+				{% endfor %}
+	    </div>
+	  </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "How it works",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Tagline"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Steps",
+        "settings": [
+          {
+		        "type": "image_picker",
+		        "id": "stepImage",
+		        "label": "Step Graphic"
+		      },
+		      {
+		        "type": "textarea",
+		        "id": "randomstuff",
+		        "label": "Step Text",
+		        "default": "Text stuff"
+		      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "How it works",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
