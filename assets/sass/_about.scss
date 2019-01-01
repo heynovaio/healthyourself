@@ -3,8 +3,12 @@
 }
 #about-us {
 	h2 {
-		font-size: 42px;
+		font-size: 36px;
 		margin-bottom: 40px;
+    font-weight: 900px;
+		color: $brandPrimary;
+    text-align: center;
+		letter-spacing: -0.015em;
 	}
 	img {
 		max-width: 100%;
@@ -51,4 +55,10 @@
 		width: 100%;
 		text-align: center;
 	}
+}
+
+.moto-section-img {
+		max-width: 636px;
+ max-height: 480px;
+		margin-left: 82px;
 }
