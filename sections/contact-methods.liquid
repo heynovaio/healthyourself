@@ -1,0 +1,67 @@
+<section class="contact-methods">
+  <div class="wrapper">
+		<div class=" {{ section.settings.layout }}">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+      <div class="col-3">
+      	{% for block in section.blocks %}
+      		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+	      	<div class="inner-col">
+            <a href="{{ block.settings.url | escape }}">
+              <span class="img-container">
+  							<img src="{{ block.settings.stepImage | img_url: '300x300' }}"
+                   data-src="{{ img_url }}"
+                   alt="test">
+              </span>
+  		        <p>{{ block.settings.textTitle | escape }}</p>
+            </a>
+			    </div>
+				{% endfor %}
+	    </div>
+	  </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Contact Methods",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Contact Type",
+        "settings": [
+          {
+		        "type": "image_picker",
+		        "id": "stepImage",
+		        "label": "Step Graphic"
+		      },
+		      {
+		        "type": "text",
+		        "id": "textTitle",
+		        "label": "Contact Text",
+		        "default": "Text stuff"
+		      },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Contact URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact Methods",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
