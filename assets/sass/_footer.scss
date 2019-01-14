@@ -1,16 +1,39 @@
-.site-footer h3.h4 {
-  font-size: 18px;
-}
-footer {
-	.grid-uniform {
-		@media only screen and (max-width: 769px){
-			display: block;
-		}
-	}
-	.grid-uniform .grid__item {
-		width: 100%;
-		display: block;
-		padding-left: 0;
-		text-align: center;
-	}
-}
+#shopify-section-footer{
+  .site-footer {
+    input {
+    max-width: 350px;
+      .btn {
+      text-transform: uppercase;
+      padding: 8px 16px;
+      font-weight: 800;
+  }
+    }
+    ul.site-footer__links {
+        text-align: left;
+    }
+    h3.h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 17px;
+      padding-left: 0px;
+    }
+    li {
+      font-size: 17px;
+    }
+    footer {
+    	.grid-uniform {
+    		@media only screen and (max-width: 769px){
+    			display: block;
+    		}
+    	}
+    	.grid-uniform .grid__item {
+    		width: 100%;
+    		display: block;
+    		padding-left: 0;
+    		text-align: left;
+        margin-left: 100px;
+    	}
+    }
+    }
+  }

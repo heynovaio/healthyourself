@@ -35,6 +35,7 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'blog' %}
+        {% comment %}
           <div class="grid__item {{ column_width }} site-footer__links">
             <h3 class="h4"><a href="/blogs/{{ block.settings.blog }}">{{ 'layout.footer.blog_title' | t }}</a></h3>
             {% assign article = blogs[block.settings.blog].articles.first %}
@@ -72,6 +73,7 @@
               <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
             {% endif %}
           </div>
+          {% endcomment %}
 
         {% when 'menu' %}
           <div class="grid__item {{ column_width }}">

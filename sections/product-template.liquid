@@ -234,12 +234,13 @@
       </div>
     </div>
   </div>
+  </div>
+</div>
 
   {% if section.settings.product_related_enable %}
     {% include 'related-products' %}
   {% endif %}
-  </div>
-</div>
+
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">

@@ -1,8 +1,27 @@
 #about-us {
+	.staff {
+		padding: 40px 0;
+		text-align: center;
+			.staff-name {
+				font-weight: 700;
+				font-size: 24px;
+				margin-top: 20px;
+				margin-bottom: 0px;
+			}
+			p {
+				padding: 0px 20px 0px 20px;
+			}
+			h2 {
+				margin-bottom: 60px;
+			}
+	}
 	.motto-section {
 		padding-bottom: 50px;
+		.img-container {
+			margin-right: 50px;
+		}
 		h2 {
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 		}
 	}
 	h2 {
@@ -16,6 +35,8 @@
 	p {
 		text-align: center;
 		font-size: 18px;
+		margin-bottom: 20px;
+		padding: 0px 50px 0px 50px;
 	}
 	p.subtitle {
 		font-size: 36px;
@@ -24,14 +45,20 @@
 		color: $brandMed;
 	}
 	.btn {
-		padding: 14px 22px;
-		text-transform: uppercase;
-		margin-top: 25px;
+			margin-top: 25px;
+			border: none;
+	   	outline: none;
+	    -webkit-appearance: none;
+	    background-color: #153167;
+	    color: #fff;
+	    font-weight: 700;
+	    letter-spacing: -0.05em;
+	    padding: 14px 22px;
+	    font-size: 18px;
+	    text-transform: uppercase;
+	    letter-spacing: 0.010em;
 	}
 
-	img {
-		max-width: 100%;
-	}
 }
 .template-page {
 	.section-header {
@@ -56,10 +83,7 @@
     padding-top: 20px;
 }
 }
-.staff {
-	padding: 40px 0;
-	text-align: center;
-}
+
 .col-3 {
 	@media only screen and (min-width: 769px){
 		display: flex;
@@ -94,11 +118,18 @@
 		color: $brandMed;
 	}
 	.btn {
-		padding: 14px 22px;
-		text-transform: uppercase;
-		margin-top: 25px;
+	border: none;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #153167;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    padding: 14px 22px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.010em;
 	}
-
 	img {
 		max-width: 100%;
 	}
@@ -106,7 +137,4 @@
 		max-width: 634px;
 		margin-left: 82px;
 	}
-}
-.content-title-desc {
-
 }

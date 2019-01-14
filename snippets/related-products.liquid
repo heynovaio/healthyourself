@@ -11,6 +11,8 @@
   {% endfor %}
 {% endif %}
 
+<div data-section-id="{{ section.id }}" id="related-products-section" class="featured-products" data-section-type="featured-products-section">
+
 {% if collection and collection.products_count > 1 %}
   <hr class="hr--clear hr--small">
   <div class="section-header section-header--medium">
@@ -35,3 +37,4 @@
     {% endfor %}
   </div>
 {% endif %}
+</div>
