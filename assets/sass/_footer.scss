@@ -2,11 +2,8 @@
   .site-footer {
     input {
     max-width: 350px;
-      .btn {
-      text-transform: uppercase;
-      padding: 8px 16px;
-      font-weight: 800;
-  }
+    padding: 10px;
+    font-size: 17px;
     }
     ul.site-footer__links {
         text-align: left;
@@ -15,11 +12,11 @@
       font-size: 20px;
     }
     p {
-      font-size: 17px;
+      font-size: 16px;
       padding-left: 0px;
     }
     li {
-      font-size: 17px;
+      font-size: 16px;
     }
     footer {
     	.grid-uniform {
@@ -36,4 +33,13 @@
     	}
     }
     }
+    input#subscribe {
+    text-transform: uppercase;
+    padding: 10px 22px;
+    font-size: 16px;
+    &:hover {
+    background-color: #fff;
+    color: #153167;
+    }
+}
   }

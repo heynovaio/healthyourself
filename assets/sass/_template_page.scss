@@ -44,6 +44,9 @@
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.010em;
+		&:hover {
+	    background-color: #629c9c;
+	  }
 	}
 	.grid__item {
 		padding-left: 0;
