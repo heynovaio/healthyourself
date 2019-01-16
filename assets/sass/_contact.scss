@@ -1,6 +1,10 @@
 #contact-us {
 	.help-copy {
 	margin-bottom: 72px;
+	.below-button-text {
+		margin-top: 40px;
+		padding: 0px 50px 0px 50px;
+	}
 		.feature-row__text {
 		padding-top: 0px;
 		}
@@ -52,11 +56,23 @@ section.contact-methods {
 	a {
 		display: block;
 	}
-	p {
-		color: #424b59;
+	.inner-col {
+		padding: 30px 15px;
+		&:hover {
+			border-style: solid;
+			border-color: #629c9c;
+		}
+	}
+	.contact-text {
+		color: #333;
 		font-weight: 600;
 		font-family: "Cabin", sans-serif;
 		font-size: 20px;
+	}
+	.contact-details {
+		font-weight: 400;
+		color: #333;
+		padding-bottom: 40px;
 	}
 }
 .map-form-container {
@@ -77,4 +93,5 @@ section.contact-methods {
 				background-color: #629c9c;
 			}
 }
+
 }

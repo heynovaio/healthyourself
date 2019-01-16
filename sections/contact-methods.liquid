@@ -14,7 +14,8 @@
                    data-src="{{ img_url }}"
                    alt="test">
               </span>
-  		        <p>{{ block.settings.textTitle | escape }}</p>
+  		        <p class="contact-text">{{ block.settings.textTitle | escape }}</p>
+              <p class="contact-details">{{ block.settings.textDetail | escape }}</p>
             </a>
 			    </div>
 				{% endfor %}
@@ -49,6 +50,12 @@
 		        "label": "Contact Text",
 		        "default": "Text stuff"
 		      },
+          {
+           "type": "text",
+           "id": "textDetail",
+           "label": "Contact Detail",
+           "default": "Text stuff"
+         },
           {
             "type": "url",
             "id": "url",

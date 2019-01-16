@@ -7,6 +7,8 @@
 	}
 
 }
+/* single product listing page styling */
+
 .breadcrumb a, .breadcrumb span {
 	font-size: 16px;
 }
@@ -65,3 +67,34 @@
 		padding-right: 24px;
 	}
 }
+
+/* product page styling */
+
+h1.section-header__title.section-header__title--left {
+    color: #153167;
+    font-size: 42px;
+    margin-top: 30px;
+}
+.wrapper {
+    padding: 0 50px;
+}
+
+/* pagination styling */
+
+ul.pagination-custom {
+    font-weight: 600;
+    font-size: 20px;
+
+		a {
+			border: 1px solid #fff;
+	    color: #fff;
+	    background-color: #153167;
+		}
+
+		span {
+    background-color: #629c9c;
+		border: 1px solid #fff;
+		color: #fff;
+		}
+
+	}
