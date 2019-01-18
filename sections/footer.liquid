@@ -34,46 +34,17 @@
 
     {% for block in section.blocks %}
       {% case block.type %}
-        {% when 'blog' %}
-        {% comment %}
-          <div class="grid__item {{ column_width }} site-footer__links">
-            <h3 class="h4"><a href="/blogs/{{ block.settings.blog }}">{{ 'layout.footer.blog_title' | t }}</a></h3>
-            {% assign article = blogs[block.settings.blog].articles.first %}
-            <p class="h5">{{ article.title | link_to: article.url }}</p>
-            {% if article.image %}
-              {% capture img_id %}ArticleImage-{{ section.id }}--{{ article.image.id }}{% endcapture %}
-              {% capture wrapper_id %}ArticleImageWrapper-{{ section.id }}--{{ article.image.id }}{% endcapture %}
-              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              {%- assign image_alt = article.title | escape -%}
-              {% include 'image-style' with image: article.image, width: article_width, height: 480, wrapper_id: wrapper_id, img_id: img_id %}
-              <p>
-                <div id="{{ wrapper_id }}" class="article__image-wrapper supports-js">
-                  <div style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
-                    <img id="{{ img_id }}"
-                         class="article__image lazyload"
-                         src="{{ article.image | img_url: '300x300' }}"
-                         data-src="{{ img_url }}"
-                         data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940, 1080, 1296]"
-                         data-aspectratio="{{ article.image.aspect_ratio }}"
-                         data-sizes="auto"
-                         alt="{{ image_alt }}">
-                  </div>
-                </div>
-              </p>
 
-              <noscript>
-                <p>{{ article | img_url: 'large' | img_tag: image_alt, 'article__image' | link_to: article.url }}</p>
-              </noscript>
-            {% endif %}
-            {% if article.excerpt.size > 0 %}
-            <div class="clearfix">
-              {{ article.excerpt }}
+        {% when 'contact' %}
+          <div class="grid__item {{ column_width }}">
+            {% unless num_columns == 1 %}
+            <h3 class="h4">{{ block.settings.menu_title | escape }}</h3>
+            {% endunless %}
+            <div class="map">
+              <div class="contact-details"
             </div>
-            {% else %}
-              <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
-            {% endif %}
           </div>
-          {% endcomment %}
+
 
         {% when 'menu' %}
           <div class="grid__item {{ column_width }}">
@@ -87,26 +58,21 @@
             </ul>
           </div>
 
-        {% when 'social' %}
-          <div class="grid__item {{ column_width }}">
-            <h3 class="h4">{{ 'layout.footer.social_title' | t }}</h3>
+            {% when 'social' %}
+            <div class="grid__item {{ column_width }}">
+            <div class="social">
+              <h3 class="h4">{{ 'layout.footer.social_title' | t }}</h3>
               {% comment %}
                 Loop through the social network links
               {% endcomment %}
               {% include 'social-links' %}
-          </div>
+            </div>
 
-        {% when 'text' %}
-          <div class="grid__item {{ column_width }}">
-            <h3 class="h4">{{ block.settings.title | escape }}</h3>
-            <div class="rte">{{ block.settings.richtext }}</div>
-          </div>
-
-        {% when 'newsletter' %}
-          <div class="grid__item {{ column_width }}">
+            {% when 'newsletter' %}
             <h3 class="h4">{{ 'layout.footer.newsletter_title' | t }}</h3>
             <p>{{ 'layout.footer.newsletter_caption' | t }}</p>
             {% include 'newsletter-form' %}
+
           </div>
 
       {% endcase %}
@@ -114,12 +80,6 @@
   </div>
 
   <hr class="hr--small hr--clear">
-
-  <div class="grid">
-    <div class="grid__item text-center">
-      <p class="site-footer__links">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</p>
-    </div>
-  </div>
 
   {% if section.settings.show_methods_of_payment %}
     {% unless shop.enabled_payment_types == empty %}
@@ -142,6 +102,11 @@
     </div>
     {% endunless %}
   {% endif %}
+  <div class="grid">
+    <div class="grid__item text-center">
+      <p class="site-footer__links">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</p>
+    </div>
+  </div>
 </div>
 
 </footer>

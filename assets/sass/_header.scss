@@ -3,8 +3,9 @@
 		padding: 0 20px;
 	}
 }
-.site-nav {
-
+.site-nav>li .site-nav__dropdown {
+	width: 100%;
+	left: 0;
 }
 .secondary-nav {
 	display: inline-block;
@@ -18,15 +19,56 @@
 		}
 	padding: 15px 0;
 }
+.site-nav--has-dropdown-grandchild {
+	&:hover {
+		background: #005055;
+	}
+}
+.site-nav__dropdown-grandchild {
+	top: 54px;
+  left: 41px;
+}
 .site-nav__dropdown-grandchild,
-.site-nav__dropdown {
-  background: $brandPrimary;
+.site-nav__dropdown,
+.site-nav--has-dropdown-grandchild .site-nav__link:hover {
+  background: #005a5f;
 }
 .site-nav__link .icon-arrow-down{
 	color: #fff;
 }
 .site-nav {
 	letter-spacing: 0;
+}
+.site-nav > li {
+  position: inherit;
+}
+.site-nav>li:first-child>a,
+.site-nav__link {
+  padding: 7px 16px 18px;
+}
+.site-header .site-nav>li:hover >a {
+  background: #097c82;
+}
+.site-nav__dropdown-grandchild {}
+.site-nav>li:first-child .site-nav__dropdown,
+body .site-nav > li .site-nav__dropdown {
+	padding-top: 20px;
+	background: #097c82;
+	width: 100%;
+  left: 0;
+  display: flex;
+  flex: 25%;
+  flex-wrap: wrap;
+	justify-content: flex-end;
+  padding: 20px 8% 10px;
+  text-align: center;
+	> li {
+		@media only screen and (min-width: 769px){
+	  	flex: 25%;
+	  	margin-bottom: 10px;
+	  	flex-grow: unset;
+	 	}
+ 	}
 }
 .site-nav__link:hover,
 .site-nav__link:active,

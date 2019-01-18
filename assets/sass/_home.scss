@@ -79,11 +79,16 @@ h2.section-header__title {
     padding: 0;
     margin-left: 0px;
 }
-.grid-uniform {
-	display: flex;
-	.grid__item {
-		flex: 1 auto;
-	}
+@media only screen and (min-width: 769px){
+  .grid-uniform {
+  	display: flex;
+    justify-content: space-between;
+  	.grid__item {
+      width: 19.5%;
+      position: relative;
+      padding-left: 0;
+  	}
+  }
 }
 .grid-link__meta {
   margin-bottom: 0;
@@ -95,15 +100,22 @@ h2.section-header__title {
 }
 .grid-link__title {
 	font-weight: 600;
+  font-size: 18px;
 }
 p.grid-link__meta::first-letter {
   font-size: 18px;
   color: #6b747e;
 }
+.grid__item {
+  padding-left: 12px;
+}
 .grid__item .item-container {
   height: 100%;
   position: relative;
   text-align: right;
+  background: #fff;
+  padding: 10px;
+  box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
 }
 .buy-container {
 	position: absolute;
