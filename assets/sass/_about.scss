@@ -1,4 +1,14 @@
 #about-us {
+	@media only screen and (max-width: 1087px) {
+		.wrapper {
+			padding: 0 20px;
+		}
+		.motto-section {
+			p {
+				padding: 0 20px;
+			}
+		}
+}
 	.staff {
 		padding: 40px 0;
 		text-align: center;

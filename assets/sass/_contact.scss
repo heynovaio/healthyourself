@@ -1,6 +1,11 @@
 #contact-us {
+	@media only screen and (max-width: 1087px) {
+		.wrapper {
+    padding: 0 20px;
+}
 	.help-copy {
 	margin-bottom: 72px;
+	}
 	.below-button-text {
 		margin-top: 40px;
 		padding: 0px 50px 0px 50px;
@@ -20,9 +25,13 @@
 		letter-spacing: -0.015em;
 		text-align: center;
 	}
+	@media only screen and (min-width: 1087px) {
+		p {
+			padding: 0px 50px 0px 50px;
+		}
+	}
 	p {
 		margin-bottom: 20px;
-		padding: 0px 50px 0px 50px;
 	}
 	a.btn {
     margin-top: 20px;
