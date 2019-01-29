@@ -90,11 +90,22 @@
           position: relative;
           padding-left: 0;
           box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
+					.grid-link__image {
+						max-height: 400px !important;
+						overflow: hidden;
+						height: auto !important;
+						img {
+							width: auto;
+							max-height: 380px !important;
+							height: auto;
+							max-height: inherit !important;
+						}
+					}
           &:hover {
             margin-top: -5px;
             margin-bottom: 5px;
             transition: all .75s;
-            &::after {
+            a::after {
               position: absolute;
               top: 0;
               left: 0;
