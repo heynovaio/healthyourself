@@ -63,6 +63,7 @@ h2.section-header__title {
   }
   .grid-link__image {
   	padding: 0 10px;
+    max-height: 400px;
   }
 }
 .grid-link:hover .grid-link__image, .grid-link:active .grid-link__image, .grid-link--focus:hover .grid-link__image, .grid-link--focus:active .grid-link__image {
