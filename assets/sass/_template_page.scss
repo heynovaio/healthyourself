@@ -80,43 +80,56 @@
 .template-collection {
   .main-content {
     background: #f3f4f7;
-    @media only screen and (min-width: 769px){
-      .grid-uniform {
-        display: flex;
-        justify-content: space-between;
-        .grid__item {
-          width: 19.5%;
-          margin-bottom: 12px;
-          position: relative;
-          padding-left: 0;
-          box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
-					.grid-link__image {
-						max-height: 400px !important;
-						overflow: hidden;
-						height: auto !important;
-						img {
-							width: auto;
-							max-height: 380px !important;
-							height: auto;
-							max-height: inherit !important;
-						}
-					}
-          &:hover {
-            margin-top: -5px;
-            margin-bottom: 5px;
-            transition: all .75s;
-            a::after {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: #2D549E;
-              opacity: .25;
-              content: '';
-            }
+  }
+}
+#shopify-section-featured-collection,
+#shopify-section-collection-template,
+#shopify-section-product-template{
+  @media only screen and (min-width: 769px){
+    .grid-uniform {
+      display: flex;
+      justify-content: space-between;
+      .grid__item {
+        min-width: 20%;
+        position: relative;
+        padding: 6px;
+        margin: 0;
+        flex: 1;
+        &:hover {
+          margin-top: -5px;
+          margin-bottom: 5px;
+          transition: all .5s;
+          a::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #2D549E;
+            opacity: .25;
+            content: '';
           }
         }
+        .item-container {
+          box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
+        }
+        .grid-link {
+          height: 100%;
+        }
+				.grid-link__image {
+          .product__img-wrapper > div {
+            padding: 12px 0 0;
+            text-align: center;
+            height: 258px;
+          }
+					img {
+            position: relative;
+            padding: 10px;
+            max-height: 100%!important;
+            width: auto;
+            height: 258px;
+					}
+				}
       }
     }
   }
@@ -128,9 +141,6 @@ h1.section-header__title.section-header__title--left {
   color: #153167;
   font-size: 42px;
   margin-top: 30px;
-}
-.wrapper {
-  padding: 0 50px;
 }
 
 /* pagination styling */

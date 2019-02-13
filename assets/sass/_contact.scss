@@ -1,22 +1,22 @@
 #contact-us {
+	.help-copy {
+		margin-bottom: 72px;
+	}
 	@media only screen and (max-width: 1087px) {
 		.wrapper {
-    padding: 0 20px;
-}
-	.help-copy {
-	margin-bottom: 72px;
-	}
-	.below-button-text {
-		margin-top: 40px;
-		padding: 0px 50px 0px 50px;
-	}
+    	padding: 0 20px;
+		}
+		.below-button-text {
+			margin-top: 40px;
+			padding: 0px 50px 0px 50px;
+		}
 		.feature-row__text {
-		padding-top: 0px;
+			padding-top: 0px;
 		}
 		h2 {
 				margin-bottom: 30px;
 		}
-}
+	}
 	h2 {
 		font-size: 36px;
 		margin-bottom: 60px;
@@ -100,19 +100,53 @@ section.contact-methods {
 	padding: 50px 0;
 	.form-btn {
 		border: none;
-			outline: none;
-			-webkit-appearance: none;
-			background-color: #153167;
-			color: #fff;
-			font-weight: 700;
-			letter-spacing: -0.05em;
-			padding: 14px 50px;
-			font-size: 18px;
-			text-transform: uppercase;
-			letter-spacing: 0.010em;
-			&:hover {
-				background-color: #629c9c;
-			}
+		outline: none;
+		-webkit-appearance: none;
+		background-color: #153167;
+		color: #fff;
+		font-weight: 700;
+		letter-spacing: -0.05em;
+		padding: 14px 50px;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 0.010em;
+		&:hover {
+			background-color: #629c9c;
+		}
+	}
 }
-
+#contact-us {
+	.map-form-container {
+		.wrapper {
+			text-align: left;
+			@media only screen and (min-width: 769px){
+				display: flex;
+				justify-content: space-between;
+				> div {
+					flex: 1;
+					min-width: 50%;
+				}
+			}
+			.map {
+				margin-right: 50px;
+				padding: 50px;
+				text-align: center;
+			}
+			form {
+				text-align: left;
+				.btn {
+					float: none;
+				}
+			}
+			.form {
+				padding-top: 30px;
+			}
+			.form p,
+			.form h2 {
+				text-align: left;
+				padding-left: 0;
+				margin-bottom: 25px;
+			}
+		}
+	}
 }

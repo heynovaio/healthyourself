@@ -1,3 +1,8 @@
+.index-section.shopify-section{
+  background: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 h2.section-header__title {
   text-align: center;
   margin-bottom: 45px;
@@ -85,7 +90,7 @@ h2.section-header__title {
   	display: flex;
     justify-content: space-between;
   	.grid__item {
-      width: 19.5%;
+      width: 20%;
       position: relative;
       padding-left: 0;
   	}
@@ -101,7 +106,8 @@ h2.section-header__title {
 }
 .grid-link__title {
 	font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 0 6px;
 }
 p.grid-link__meta::first-letter {
   font-size: 18px;
@@ -115,7 +121,6 @@ p.grid-link__meta::first-letter {
   position: relative;
   text-align: right;
   background: #fff;
-  padding: 10px;
   box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
 }
 .buy-container {

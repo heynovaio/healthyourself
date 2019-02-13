@@ -34,37 +34,31 @@
           <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">{{ 'products.product.sold_out' | t }}</span>
         </span>
       {% endif %}
-      <span class="grid-link__image-centered">
-        {% if featured.title != '' %}
-          {% unless featured.featured_image == blank %}
-            {% capture img_id %}ProductImage-{{ featured.featured_image.id }}{% endcapture %}
-            {% capture wrapper_id %}ProductImageWrapper-{{ featured.featured_image.id }}{% endcapture %}
-            {%- assign img_url = featured.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-
-            {% include 'image-style' with image: featured.featured_image, width: product_width, height: 480, wrapper_id: wrapper_id, img_id: img_id %}
-            <div id="{{ wrapper_id }}" class="product__img-wrapper supports-js">
-              <div style="padding-top:{{ 1 | divided_by: featured.featured_image.aspect_ratio | times: 100}}%;">
-                <img id="{{ img_id }}"
-                     class="product__img lazyload"
-                     src="{{ featured.featured_image | img_url: '300x300' }}"
-                     data-src="{{ img_url }}"
-                     data-widths="[150, 220, 360, 470, 600, 750, 940, 1080, 1296, 1512, 1728, 2048]"
-                     data-aspectratio="{{ featured.featured_image.aspect_ratio }}"
-                     data-sizes="auto"
-                     alt="{{ featured.featured_image.alt | escape }}">
-              </div>
+      {% if featured.title != '' %}
+        {% unless featured.featured_image == blank %}
+          {% capture img_id %}ProductImage-{{ featured.featured_image.id }}{% endcapture %}
+          {% capture wrapper_id %}ProductImageWrapper-{{ featured.featured_image.id }}{% endcapture %}
+          {%- assign img_url = featured.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <div class="product__img-wrapper supports-js">
+            <div>
+              <img id="{{ img_id }}"
+                   class="product__img lazyload"
+                   src="{{ featured.featured_image | img_url: '300x300' }}"
+                   data-src="{{ img_url }}"
+                   data-widths="[150, 220, 360, 470, 600, 750, 940, 1080, 1296, 1512, 1728, 2048]"
+                   data-aspectratio="{{ featured.featured_image.aspect_ratio }}"
+                   data-sizes="auto"
+                   alt="{{ featured.featured_image.alt | escape }}">
             </div>
-          {% else %}
-            <img src="{{ featured.featured_image.src | img_url: 'large' }}" alt="{{ featured.featured_image.alt | escape }}" class="product__img">
-          {% endunless %}
-          <noscript>
-            <img src="{{ featured.featured_image.src | img_url: 'large' }}" alt="{{ featured.featured_image.alt | escape }}" class="product__img">
-          </noscript>
+          </div>
         {% else %}
-          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-        {% endif %}
-      </span>
+          <img src="{{ featured.featured_image.src | img_url: 'large' }}" alt="{{ featured.featured_image.alt | escape }}" class="product__img">
+        {% endunless %}
+
+      {% else %}
+        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
     </span>
     {% if featured.title != '' %}
       <p class="grid-link__meta">
