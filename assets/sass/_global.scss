@@ -9,3 +9,25 @@
 	padding-top: 145px;
 	padding-bottom: 0;
 }
+
+@media only screen and (max-width: 769px){
+	.product__img-wrapper.supports-js {
+	    margin-top: 10px;
+	}
+	.grid__item {
+    margin-bottom: 20px;
+	}
+}
+
+.grid-link__container {
+	display: flex;
+  overflow: hidden;
+}
+
+.template-search {
+	@media (min-width: 769px){
+		main.main-content {
+		    margin-top: 80px;
+		}
+	}
+}

@@ -137,6 +137,18 @@ body .site-nav > li .site-nav__dropdown {
   height: 100%;
   width: 62%;
   z-index: 0;
+	@media (max-width: 769px){
+		background: url(banner-img.jpg) no-repeat center;
+    background-size: cover;
+    background-color: #80bdbd;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.5;
+	}
 }
 .index-section.shopify-section{
 	background: #fff;
@@ -215,10 +227,15 @@ input.header-bar__search-input {
 	.h1 {
 		position: relative;
 		z-index: 1;
-		padding-top: 40px;
+		@media (min-width: 1087px){
+			padding-top: 40px;
+		}
 	}
 	h1 {
-		font-size: 70px;
+		@media (min-width: 1087px){
+			font-size: 70px;
+		}
+		font-size: 40px;
 		line-height: 1.2;
     text-align: left;
     max-width: 720px;
@@ -226,8 +243,11 @@ input.header-bar__search-input {
     // text-transform: uppercase;
     a {
     	display: block;
-    	margin: 50px 0;
+    	margin: 10px 0;
     	color: $brandSecondary;
+			@media (min-width: 769px){
+				margin: 50px 0;
+			}
     }
 	}
 	p {

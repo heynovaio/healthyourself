@@ -7,7 +7,7 @@
       <div class="col-3">
       	{% for block in section.blocks %}
       		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-	      	<div class="inner-col">
+	      	<div class="inner-col staff-boxes">
             <div class="img-container">
 							<img src="{{ block.settings.stepImage | img_url: '300x300' }}"
                  data-src="{{ img_url }}"

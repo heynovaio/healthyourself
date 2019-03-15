@@ -1,4 +1,11 @@
 #contact-us {
+	@media only screen and (min-width: 769px){
+		.content-title-desc .img-container {
+			margin-right: 50px;
+		}
+	}
+
+
 	.help-copy {
 		margin-bottom: 72px;
 	}
@@ -53,8 +60,20 @@ section.contact-methods {
 	.col-3 {
 		margin-top: 20px;
 		align-items: normal;
+		@media only screen and (min-width: 769px){
+			.inner-col {
+				width: 30%;
+				max-height: 360px;
+				margin-bottom: 30px;
+			}
+		}
+		@media only screen and (max-width: 769px){
+			.inner-col {
+				max-height: 360px;
+				margin-bottom: 30px;
+			}
+		}
 		.inner-col {
-			width: 30%;
 			background: #fff;
 			box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
 			img {
@@ -127,8 +146,12 @@ section.contact-methods {
 					min-width: 50%;
 				}
 			}
+			@media only screen and (min-width: 769px){
+				.map {
+					margin-right: 50px;
+				}
+			}
 			.map {
-				margin-right: 50px;
 				padding: 50px;
 				text-align: center;
 			}
@@ -136,6 +159,11 @@ section.contact-methods {
 				text-align: left;
 				.btn {
 					float: none;
+				}
+			}
+			@media only screen and (min-width: 769px){
+				.form {
+					padding-right: 50px;
 				}
 			}
 			.form {

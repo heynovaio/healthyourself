@@ -12,6 +12,11 @@
 	.staff {
 		padding: 40px 0;
 		text-align: center;
+		@media only screen and (max-width: 1087px){
+			.staff-boxes {
+				margin-bottom: 50px;
+			}
+		}
 			.staff-name {
 				font-weight: 700;
 				font-size: 24px;
@@ -27,9 +32,6 @@
 	}
 	.motto-section {
 		padding-bottom: 50px;
-		.img-container {
-			margin-right: 50px;
-		}
 		h2 {
 			margin-bottom: 30px;
 		}
@@ -76,8 +78,11 @@
 .template-page {
 	.section-header {
 		max-width: 760px;
-    margin: 0 auto 70px;
     text-align: center;
+		margin: 0 auto 0;
+		@media (min-width: 1087px) {
+			margin-bottom: 70px;
+		}
 		h1 {
 			color: $brandSecondary;
 			font-size: 60px;
@@ -149,8 +154,11 @@
 	img {
 		max-width: 100%;
 	}
-	.img-container {
-		max-width: 634px;
-		margin-left: 82px;
-	}
+		@media only screen and (min-width: 769px){
+			.img-container {
+				max-width: 634px;
+				margin-left: 82px;
+				margin-right: 50px;
+			}
+		}
 }

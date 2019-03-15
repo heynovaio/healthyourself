@@ -40,6 +40,7 @@ h2.section-header__title {
     letter-spacing: -0.015em;
   }
   .item-container {
+    width: 100%;
   	background: #fff;
   	margin: 0 6px;
   	transition: all .25s;
@@ -165,6 +166,9 @@ p.grid-link__meta::first-letter {
   .featured-products {
     .grid-uniform {
     padding-right: 25px;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
     }
   }
 }

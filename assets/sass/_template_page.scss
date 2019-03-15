@@ -72,7 +72,10 @@
 	margin-top: 40px;
 
 	.grid__item:last-child {
-		padding-right: 24px;
+		@media only screen and (min-width: 769px){
+			padding-right: 24px;
+		}
+
 	}
 }
 
@@ -86,6 +89,36 @@
 #shopify-section-collection-template,
 #shopify-section-product-template{
   @media only screen and (min-width: 769px){
+		.product-filter-layout {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			.ux-filter {
+				width: 40%;
+				min-width: 200px;
+				margin-right: 20px;
+				form {
+					ul {
+						li {
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							justify-content: flex-start;
+							margin-bottom: 5px;
+							label {
+								vertical-align: middle;
+							}
+							.checkbox {
+								margin: 6px 15px 0 0;
+								padding-top: 5px;
+								min-height: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
     .grid-uniform {
       display: flex;
       justify-content: space-between;
