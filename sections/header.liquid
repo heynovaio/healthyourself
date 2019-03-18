@@ -56,7 +56,7 @@
             {% endcomment %}
 
             {% if section.settings.show_announcement %}
-              <div class="header-bar__module header-bar__message">
+              <a class="header-bar__module header-bar__message" href="#">
                 {% if section.settings.announcement_link != blank %}
                   <a href="{{ section.settings.announcement_link }}">
                 {% endif %}
@@ -64,7 +64,7 @@
                 {% if section.settings.announcement_link != blank %}
                   </a>
                 {% endif %}
-              </div>
+              </a>
             {% elsif section.settings.header_search_enable %}
 {% comment %}              <div class="header-bar__module header-bar__search">
                 {% include 'search-bar' with 'header' %}
