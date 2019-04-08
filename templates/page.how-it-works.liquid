@@ -8,22 +8,12 @@
   </div>
 </div>
 
-<section class="access">
-  <div class="wrapper">
-  	<h2>Access a Pharmacist at Home or on the go</h2>
-    <div class="img-container">
-      <img src="{{ 'pharmacist-icon.png' | asset_img_url: '300x' }}" role="presentation">
-    </div>
-    <div class="col-2">
-      <img src="{{ 'health-kit.png' | asset_img_url: '300x' }}" role="presentation">
-    </div>
-  </div>
+<section class="motto-section">
+	{% section 'content-title-desc' %}
 </section>
 
 {% section 'how-it-works' %}
 
-<section class="community">
-	<div class="wrapper">
-	  {% section 'content' %}
-	</div>
-</section>
+<div class="map-section">
+	{% section 'location' %}
+</div>

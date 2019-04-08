@@ -1,0 +1,61 @@
+.how-it-works {
+    text-align: center;
+    padding: 80px 10px;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: -0.015em;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #153167;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 22px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.010em;
+}
+
+}
+
+.map-section {
+  text-align: center;
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: -0.015em;
+    text-align: center;
+  }
+  .section-heading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    p {
+      text-align: center;
+    }
+  }
+  .copy-container {
+    max-width: 700px;
+  }
+  .subtitle {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+  .btn {
+    margin: 50px 0;
+  }
+}

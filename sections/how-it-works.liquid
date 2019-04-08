@@ -1,9 +1,6 @@
 <section class="how-it-works">
   <div class="wrapper">
 		<div class="steps">
-    	{% if section.settings.subtitle != blank %}
-        <p class="subtitle">{{ section.settings.subtitle | escape }}</p>
-      {% endif %}
       {% if section.settings.title != blank %}
         <h2>{{ section.settings.title | escape }}</h2>
       {% endif %}
@@ -16,12 +13,18 @@
                  data-src="{{ img_url }}"
                  alt="test">
             </div>
-		        <p>{{ block.settings.randomstuff | escape }}</p>
-		        {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
+            <p class="text-heading">{{ block.settings.randomstuff | escape }}</p>
+            <p>{{ block.settings.info-desc | escape }}</p>
+            {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
 			    </div>
 				{% endfor %}
 	    </div>
 	  </div>
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="btn">
+        {{ section.settings.button_label | escape }}
+      </a>
+    {% endif %}
   </div>
 </section>
 {% schema %}
@@ -39,6 +42,28 @@
         "id": "title",
         "label": "Title",
         "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "randomstuff",
+        "label": "Step Text",
+        "default": "Text stuff"
+      },
+      {
+        "type": "textarea",
+        "id": "info-desc",
+        "label": "Description",
+        "default": "Description"
       }
     ],
     "blocks": [

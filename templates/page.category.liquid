@@ -1,0 +1,38 @@
+<div class="product-filter-layout">
+  <div class="grid-uniform grid-link__container">
+    {% assign grid_item_width = 'wide--one-fifth large--one-quarter medium-down--one-half' %}
+    {%- assign product_width = 335 -%}
+
+    {% for product in collection.products %}
+      {% assign featured = product %}
+      <div class="grid__item {{grid_item_width}}">
+        {% include 'product-grid-item' %}
+      </div>
+    {% else %}
+
+      {% if shop.products_count == 0 %}
+        <div class="grid__item">
+          <div class="helper-section">
+            <div class="grid-uniform helper-content{% if section.settings.center_grid_link %} text-center{% endif %}">
+              {% for i in (1..8) %}
+                <div class="grid__item one-half post-large--one-quarter">
+                  <a href="/admin/collections" class="grid-link">
+                    <span class="grid-link__image grid-link__image--product">
+                      <span class="grid-link__image-centered">
+                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                      </span>
+                    </span>
+                    <p class="grid-link__title">{{ 'home_page.onboarding.product_title' | t }}</p>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+</div>
