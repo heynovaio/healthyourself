@@ -80,6 +80,7 @@ body .site-nav > li .site-nav__dropdown {
 	position: absolute;
 	right: 0;
 	top: 0;
+	width: 100%;
 }
 .site-header__logo {
 	margin-top: 60px;
@@ -257,4 +258,21 @@ input.header-bar__search-input {
 		font-weight: 400;
 		line-height: 1.5;
 	}
+}
+
+@media (max-width: 1068px) {
+	.mobile-nav__link {
+		font-size: 16px;
+	  font-family: "Cabin",sans-serif;
+	}
+	.mobile-nav__sublist-link {
+		a {
+			font-size: 16px;
+		  font-family: "Cabin",sans-serif;
+		}
+		.header-bar a, .header-bar button {
+    font-size: 18px;
+		}
+	}
+
 }
