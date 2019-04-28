@@ -13,8 +13,8 @@
                  data-src="{{ img_url }}"
                  alt="test">
             </div>
-            <p class="text-heading">{{ block.settings.randomstuff | escape }}</p>
-            <p>{{ block.settings.info-desc | escape }}</p>
+            <h3 class="text-heading">{{ block.settings.stepTitle | escape }}</h3>
+            <p>{{ block.settings.stepCopy | escape }}</p>
             {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
 			    </div>
 				{% endfor %}
@@ -34,11 +34,6 @@
     "settings": [
       {
         "type": "text",
-        "id": "subtitle",
-        "label": "Tagline"
-      },
-      {
-        "type": "text",
         "id": "title",
         "label": "Title",
         "default": "Heading"
@@ -52,18 +47,6 @@
         "type": "url",
         "id": "button_link",
         "label": "Button link"
-      },
-      {
-        "type": "text",
-        "id": "randomstuff",
-        "label": "Step Text",
-        "default": "Text stuff"
-      },
-      {
-        "type": "textarea",
-        "id": "info-desc",
-        "label": "Description",
-        "default": "Description"
       }
     ],
     "blocks": [
@@ -76,9 +59,15 @@
 		        "id": "stepImage",
 		        "label": "Step Graphic"
 		      },
+          {
+            "type": "text",
+            "id": "stepTitle",
+            "label": "Step Text",
+            "default": "Text stuff"
+          },
 		      {
 		        "type": "textarea",
-		        "id": "randomstuff",
+		        "id": "stepCopy",
 		        "label": "Step Text",
 		        "default": "Text stuff"
 		      }
