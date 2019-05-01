@@ -63,8 +63,12 @@ h2 {
 	font-size: 36px;
 }
 
-a, .text-link {
-    color: #046569;
-    text-decoration: underline;
-    background: transparent;
+p a, .text-link {
+  color: #046569;
+  text-decoration: underline;
+  background: transparent;
+}
+
+.collection-item__title {
+	text-decoration: none;
 }

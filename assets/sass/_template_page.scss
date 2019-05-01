@@ -94,6 +94,7 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			justify-content: space-between;
+      align-items: flex-start;
 			.ux-filter {
 				width: 40%;
 				min-width: 200px;
@@ -127,7 +128,7 @@
         position: relative;
         padding: 6px;
         margin: 0;
-        flex: 1;
+        flex: inherit;
         &:hover {
           margin-top: -5px;
           margin-bottom: 5px;
@@ -160,7 +161,8 @@
             padding: 10px;
             max-height: 100%!important;
             width: auto;
-            height: 258px;
+            top: 50%;
+            transform: translateY(-50%);
 					}
 				}
       }

@@ -6,7 +6,11 @@
   padding: 20px;
   padding-left: 20px !important;
   position: relative;
-  min-width: 20%;
+  width: auto;
+  float: none;
+  @media (min-width: 769px){
+    min-width: 20%;
+  }
   position: relative;
   flex: 1;
 
@@ -15,13 +19,25 @@
     font-weight: 700;
     font-size: 22px;
     font-family: "Cabin",sans-serif;
+    position: relative;
+    margin-top: 0;
+    display: block;
+
+    &:hover {
+      margin-top: -5px;
+      margin-bottom: 5px;
+      transition: all .5s;
+    }
   }
 }
 
 .category-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding-bottom: 50px;
+  @media (min-width: 769px){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 #lifestyle-amp-wellness, #medicine-amp-health, #personal-care, #babies-amp-kids, #household, #beauty {
