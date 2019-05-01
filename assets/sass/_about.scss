@@ -102,24 +102,30 @@
 }
 }
 
-.col-3 {
-	@media only screen and (min-width: 769px){
-		display: flex;
-		width: 100%;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    align-items: center;
+.staff {
+	.col-3 {
+		@media only screen and (min-width: 769px){
+			display: flex;
+			width: 100%;
+	    -webkit-justify-content: space-between;
+	    -ms-justify-content: space-between;
+	    justify-content: space-between;
+	    -ms-flex-align: center;
+	    -webkit-align-items: center;
+	    -moz-align-items: center;
+	    -ms-align-items: center;
+	    -o-align-items: center;
+	    align-items: flex-start;
+			flex-wrap: wrap;
+		}
 	}
-}
-.inner-col {
-	width: 100%;
-	text-align: center;
+	.inner-col {
+		width: 100%;
+		text-align: center;
+		flex: 1;
+		min-width: 50%;
+		padding: 30px 30px;
+	}
 }
 .content-title-desc {
 	.copy-container {
@@ -136,7 +142,7 @@
 		color: $brandMed;
 	}
 	.btn {
-	border: none;
+		border: none;
     outline: none;
     -webkit-appearance: none;
     background-color: #153167;

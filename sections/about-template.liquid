@@ -22,7 +22,7 @@
 	          <div class="rte featured-row__subtext">{{ section.settings.text }}</div>
 	        {% endif %}
 	        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-	          <a href="{{ section.settings.button_link }}" class="btn">
+	          <a href="{{ section.settings.button_link }}" class="btn-primary">
 	            {{ section.settings.button_label | escape }}
 	          </a>
 	        {% endif %}
@@ -57,7 +57,7 @@
 		        <div class="rte featured-row__subtext">{{ section.settings.text2 }}</div>
 		      {% endif %}
 		      {% if section.settings.button_label2 != blank and section.settings.button_link2 != blank %}
-		        <a href="{{ section.settings.button_link2 }}" class="btn">
+		        <a href="{{ section.settings.button_link2 }}" class="btn-primary">
 		          {{ section.settings.button_label | escape }}
 		        </a>
 		      {% endif %}

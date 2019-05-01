@@ -31,3 +31,40 @@
 		}
 	}
 }
+
+.btn-primary {
+	margin-top: 25px;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	background-color: #153167;
+	color: #fff;
+	font-weight: 700;
+	padding: 14px 22px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.010em;
+	border-radius: 2px;
+	line-height: 1.42;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	font-family: "Cabin",sans-serif;
+	display: inline-block;
+cursor: pointer;
+	&:hover {
+	background-color: #274681;
+	color: #fff;
+	}
+}
+
+h2 {
+	font-size: 36px;
+}
+
+a, .text-link {
+    color: #046569;
+    text-decoration: underline;
+    background: transparent;
+}

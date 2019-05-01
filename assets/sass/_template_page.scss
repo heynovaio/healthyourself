@@ -209,3 +209,28 @@ ul.pagination-custom {
   	color: #fff;
 	}
 }
+
+.default-template {
+	h2 b {
+		font-size: 36px;
+		color: #629c9c;
+	}
+	a b {
+		margin-top: 25px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #153167;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 22px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.010em;
+		text-decoration: none;
+		&:hover {
+    background-color: #274681;
+    color: #fff;
+    }
+	}
+}

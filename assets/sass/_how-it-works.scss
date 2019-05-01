@@ -1,3 +1,8 @@
+#how-it-works {
+  .how-it-works {
+    padding: 10px 10px 50px;
+  }
+}
 .how-it-works {
     text-align: center;
     padding: 80px 10px;
@@ -55,7 +60,7 @@
   p {
     text-align: left;
   }
-  .btn {
+  .btn-primary {
     margin: 50px 0;
   }
 }
@@ -64,6 +69,42 @@
     margin-top: 50px;
 }
 
-.btn {
-  margin-top: 20px;
+.inner-col {
+  padding: 0 20px;
 }
+
+.col-3 {
+  align-items: normal;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  @media (min-width: 940px){
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .inner-col {
+      width: 30%;
+      margin: 20px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 940px){
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .inner-col {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+}
+
+/*.btn {
+  margin-top: 20px;
+}*/

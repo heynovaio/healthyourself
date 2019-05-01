@@ -92,6 +92,7 @@ body .site-nav > li .site-nav__dropdown {
 .header-bar a, .header-bar button {
 	color: $brandSecondary;
 	font-weight: 600;
+	text-decoration: none;
 }
 .header-bar__module {
 	font-weight: 600;
@@ -127,6 +128,7 @@ body .site-nav > li .site-nav__dropdown {
 	position: fixed;
 	z-index: 3;
 	top:0;
+	width: 100%;
 }
 .banner-bg {
 	background: url('banner-img-04.jpg') no-repeat right top;
@@ -134,7 +136,7 @@ body .site-nav > li .site-nav__dropdown {
 	background-color: #80bdbd;
 	position: absolute;
 	right: 0;
-  top: 0;
+  top: 140px;
   height: 100%;
   width: 62%;
   z-index: 0;
@@ -239,7 +241,7 @@ input.header-bar__search-input {
 		font-size: 40px;
 		line-height: 1.2;
     text-align: left;
-    max-width: 720px;
+    max-width: 750px;
     color: $brandSecondary;
     // text-transform: uppercase;
     a {
@@ -251,12 +253,17 @@ input.header-bar__search-input {
 			}
     }
 	}
-	p {
+	.search-bar-heading {
+	  font-size: 24px;
+	  font-weight: 600;
+	}
+	.tagline {
 		max-width: 450px;
-		font-size: 20px;
+		font-size: 22px;
 		text-align: left;
 		font-weight: 400;
 		line-height: 1.5;
+		margin-bottom: 40px;
 	}
 }
 
@@ -275,4 +282,7 @@ input.header-bar__search-input {
 		}
 	}
 
+}
+.cart-page-link {
+	text-decoration: none;
 }

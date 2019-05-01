@@ -26,7 +26,7 @@
         <p>{{ section.settings.address }}</p>
       {% endif %}
       {% if section.settings.button != blank and section.settings.map_address != blank %}
-        <p><a href="https://maps.google.com?daddr={{ section.settings.map_address | escape }}" target="_blank" class="btn">
+        <p><a href="https://maps.google.com?daddr={{ section.settings.map_address | escape }}" target="_blank" class="btn-primary">
           {% if section.settings.show_pin %}
             <span class="icon icon-pin" aria-hidden="true"></span>
           {% endif %}

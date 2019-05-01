@@ -14,13 +14,13 @@
           <div id="{{ img_wrapper_id }}" class="feature-row__image-wrapper supports-js">
             <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
               <img id="{{ img_id }}"
-               class="feature-row__image lazyload"
-               src="{{ section.settings.image | img_url: '300x300' }}"
-               data-src="{{ img_url }}"
-               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-               data-aspectratio="{{ section.settings.image.aspect_ratio }}"
-               data-sizes="auto"
-               alt="{{ section.settings.image.alt | escape }}">
+                   class="feature-row__image lazyload"
+                   src="{{ section.settings.image | img_url: '300x300' }}"
+                   data-src="{{ img_url }}"
+                   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                   data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                   data-sizes="auto"
+                   alt="{{ section.settings.image.alt | escape }}">
             </div>
           </div>
         {% else %}
@@ -28,6 +28,30 @@
         {% endif %}
       </div>
     {% endcapture %}
+
+    <div class="feature-row">
+      {% if section.settings.layout == 'left' %}
+        {{ image_layout }}
+      {% endif %}
+
+      <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }}">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title | escape }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="rte featured-row__subtext">{{ section.settings.text }}</div>
+        {% endif %}
+        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="btn">
+            {{ section.settings.button_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.layout == 'right' %}
+        {{ image_layout }}
+      {% endif %}
+    </div>
   </div>
 </div>
 
