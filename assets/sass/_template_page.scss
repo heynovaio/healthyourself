@@ -212,12 +212,12 @@ ul.pagination-custom {
 	}
 }
 
-.default-template {
+.default-template .rte {
 	h2 b {
 		font-size: 36px;
 		color: #629c9c;
 	}
-	a b {
+	p b a {
 		margin-top: 25px;
     border: none;
     outline: none;
