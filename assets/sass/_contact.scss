@@ -77,6 +77,7 @@
 			@media only screen and (min-width: 940px){
 				flex-direction: row;
 				flex-wrap: nowrap;
+				align-items: start;
 				.inner-col {
 					width: 30%;
 					margin: 20px;

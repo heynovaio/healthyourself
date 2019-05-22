@@ -2,7 +2,38 @@
 	.grid__item {
 		margin: 0 auto;
 		max-width: 650px;
-		width: auto;
 		float: none;
+	}
+	.account-buttons {
+    display: flex;
+    justify-content: flex-end;
+		margin-top: 20px;
+	}
+	input[type="password"] {
+		margin-bottom: 30px !important;
+	}
+	.btn-secondary {
+		margin-left: 10px;
+	}
+	.btn-primary {
+		background-color: $brandSecondary!important;
+	}
+}
+
+#account {
+	.section-header {
+		text-align: center;
+		h1 {
+	    color: #153167;
+	    font-size: 60px;
+		}
+	}
+	.wrapper {
+		max-width: 750px;
+	}
+	@media only screen and (min-width: 1250px){
+		.wide--one-third {
+		  width: 100%;
+		}
 	}
 }

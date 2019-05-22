@@ -139,7 +139,7 @@ h2.section-header__title {
 @media only screen and (min-width: 769px){
   .grid-uniform {
   	display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   	.grid__item {
       width: 20%;
       position: relative;
@@ -181,7 +181,7 @@ p.grid-link__meta::first-letter {
 	width: 100%;
 }
 #AddToCartForm {
-	 text-align: right;
+	text-align: right;
   display: inline-block;
   margin-bottom: 0;
 }

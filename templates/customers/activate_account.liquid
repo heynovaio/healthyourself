@@ -2,8 +2,9 @@
   <div class="section-header section-header--large">
     <h1 class="section-header__title">{{ 'customer.activate_account.title' | t }}</h1>
   </div>
-
-  <p>{{ 'customer.activate_account.subtext' | t }}</p>
+  <div class="grid__item">
+    <p>{{ 'customer.activate_account.subtext' | t }}</p>
+  </div>
 
   <div class="grid">
     <div class="grid__item wide--one-half large--two-thirds medium-down--one-whole">
@@ -21,11 +22,9 @@
         <label for="CustomerPasswordConfirmation">{{ 'customer.activate_account.password_confirm' | t }}</label>
         <input type="password" value="" name="customer[password_confirmation]" id="CustomerPasswordConfirmation">
 
-        <div>
-          <p>
-            <input type="submit" class="btn" value="{{ 'customer.activate_account.submit' | t }}">
-          </p>
-          <input type="submit" class="btn--secondary" name="decline" value="{{ 'customer.activate_account.cancel' | t }}">
+        <div class="account-buttons">
+          <input type="submit" class="btn-primary" name="decline" value="{{ 'customer.activate_account.cancel' | t }}">
+          <input type="submit" class="btn-secondary" value="{{ 'customer.activate_account.submit' | t }}">
         </div>
       {% endform %}
 
