@@ -21,6 +21,13 @@
 }
 
 #account {
+	h2 {
+    font-size: 36px;
+    color: #629c9c;
+	}
+	form {
+    padding: 0 100px;
+	}
 	.section-header {
 		text-align: center;
 		h1 {
@@ -29,11 +36,48 @@
 		}
 	}
 	.wrapper {
-		max-width: 750px;
+		max-width: 1000px;
 	}
 	@media only screen and (min-width: 1250px){
 		.wide--one-third {
 		  width: 100%;
+		}
+	}
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+		.btn-primary {
+			a#customer_register_link {
+	    color: #fff;
+			}
+		}
+	.btn-secondary {
+		margin-top: 25px;
+    margin-left: 15px;
+		a .text-link {
+			margin-top: 25px;
+	    border: none;
+	    outline: none;
+	    -webkit-appearance: none;
+	    background-color: #629c9c;
+	    color: #fff;
+	    font-weight: 700;
+	    padding: 14px 22px;
+	    font-size: 18px;
+	    text-transform: uppercase;
+	    letter-spacing: 0.010em;
+	    border-radius: 2px;
+	    line-height: 1.42;
+	    text-decoration: none;
+	    text-align: center;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    font-family: "Cabin",sans-serif;
+	    display: inline-block;
+	    cursor: pointer;
 		}
 	}
 }
