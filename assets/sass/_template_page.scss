@@ -93,7 +93,7 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
-			justify-content: space-between;
+			justify-content: flex-start;
       align-items: flex-start;
 			.ux-filter {
 				width: 40%;
@@ -122,7 +122,7 @@
 		}
     .grid-uniform {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       .grid__item {
         min-width: 20%;
         position: relative;
@@ -233,12 +233,12 @@ ul.pagination-custom {
 	}
 }
 
-.default-template {
+.default-template .rte {
 	h2 b {
 		font-size: 36px;
 		color: #629c9c;
 	}
-	a b {
+	h5 b a {
 		margin-top: 25px;
     border: none;
     outline: none;

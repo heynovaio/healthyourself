@@ -1,5 +1,5 @@
-{% paginate customer.addresses by 5 %}
-
+<div class="wrapper">
+  {% paginate customer.addresses by 5 %}
   <div class="section-header section-header--large">
     <h1 class="section-header__title section-header__title--left">{{ 'customer.account.title' | t }}</h1>
     <div class="section-header__link--right">
@@ -212,3 +212,5 @@
   </script>
 
 {% endpaginate %}
+
+</div>

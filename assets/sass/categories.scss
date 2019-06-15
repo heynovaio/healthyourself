@@ -9,7 +9,8 @@
   width: auto;
   float: none;
   @media (min-width: 769px){
-    min-width: 20%;
+    min-width: 30%;
+    max-width: 400px;
   }
   position: relative;
   flex: 1;
@@ -35,7 +36,7 @@
   padding-bottom: 50px;
   @media (min-width: 769px){
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 }
