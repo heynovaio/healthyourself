@@ -127,7 +127,7 @@
     "account": {
       "title": "My Account",
       "details": "Account Details",
-      "view_addresses": "View Addresses",
+      "view_addresses": "Edit or View Addresses",
       "return": "Return to Account Details"
     },
     "activate_account": {

@@ -7,6 +7,20 @@
     text-align: center;
     padding: 80px 10px;
 
+    .img-container {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+      .icon-img {
+        max-width: 100px;
+        max-height: 120px;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+
   h2 {
     font-size: 36px;
     margin-bottom: 40px;
@@ -104,6 +118,8 @@
     }
   }
 }
+
+
 
 /*.btn {
   margin-top: 20px;
