@@ -3,7 +3,7 @@
   <div class="section-header section-header--large">
     <h1 class="section-header__title section-header__title--left">{{ 'customer.account.title' | t }}</h1>
     <div class="section-header__link--right">
-      <a href="#" class="btn" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.add_new' | t }}</a>
+      <a href="#" class="btn-secondary" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.add_new' | t }}</a>
     </div>
   </div>
 
@@ -72,7 +72,7 @@
           <label for="address_default_address_new" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
         </p>
 
-        <p><input type="submit" class="btn" value="{{ 'customer.addresses.add' | t }}"></p>
+        <p><input type="submit" class="btn-primary" value="{{ 'customer.addresses.add' | t }}"></p>
         <p><a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.cancel' | t }}</a></p>
         <hr>
     </div>
@@ -113,12 +113,12 @@
           <h4>{{ 'customer.addresses.edit_address' | t }}</h4>
           {{ form.errors | default_errors }}
           <div class="grid">
-            <div class="grid__item one-half small--one-whole">
+            <div class="grid__item small--one-whole">
               <label for="AddressFirstName_{{form.id}}">{{ 'customer.addresses.first_name' | t }}</label>
               <input type="text" id="AddressFirstName_{{form.id}}" class="address_form" name="address[first_name]" value="{{form.first_name}}" autocapitalize="words">
             </div>
 
-            <div class="grid__item one-half small--one-whole">
+            <div class="grid__item small--one-whole">
               <label for="AddressLastName_{{form.id}}">{{ 'customer.addresses.last_name' | t }}</label>
               <input type="text" id="AddressLastName_{{form.id}}" class="address_form" name="address[last_name]" value="{{form.last_name}}" autocapitalize="words">
             </div>

@@ -21,6 +21,12 @@
 }
 
 #account {
+	.btn-logout {
+    margin-bottom: 50px;
+		a {
+	    color: #fff;
+		}
+	}
 	h2 {
     font-size: 36px;
     color: #629c9c;
@@ -79,5 +85,11 @@
 	    display: inline-block;
 	    cursor: pointer;
 		}
+	}
+}
+
+#addresses {
+	.grid__item {
+    padding-left: 0;
 	}
 }

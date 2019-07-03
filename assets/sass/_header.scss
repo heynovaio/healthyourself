@@ -138,29 +138,6 @@ body .site-nav > li .site-nav__dropdown {
 	top:0;
 	width: 100%;
 }
-.banner-bg {
-	background: url('banner-img-04.jpg') no-repeat right center;
-	background-size: cover;
-	background-color: #80bdbd;
-	position: absolute;
-	right: 0;
-  top: 140px;
-  height: 100%;
-  width: 62%;
-  z-index: 0;
-	@media (max-width: 769px){
-		background: url(banner-img.jpg) no-repeat center;
-    background-size: cover;
-    background-color: #80bdbd;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    opacity: 0.5;
-	}
-}
 .index-section.shopify-section{
 	background: #fff;
 	padding-top: 0;

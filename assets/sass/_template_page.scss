@@ -15,7 +15,7 @@
 	font-size: 16px;
 }
 .breadcrumb {
-    margin: 20px 0 25px;
+    margin: 20px 0 0px;
 }
 .product-single{
 	.h3 {
@@ -118,6 +118,25 @@
 						}
 					}
 				}
+        .filter-title {
+          margin-bottom: 0;
+        }
+        .cf-title {
+          font-size: 1.23529em;
+          line-height: 1.4;
+          font-weight: 700;
+          margin: 18px 0 10px;
+          display: block;
+        }
+        span.cf-options-container{
+          label{
+            margin-bottom: 6px;
+          }
+          input {
+            margin-top: -5px;
+            vertical-align: middle;
+          }
+        }
 			}
 		}
     .grid-uniform {
@@ -237,6 +256,16 @@ ul.pagination-custom {
 	h2 b {
 		font-size: 36px;
 		color: #629c9c;
+	}
+	h2 span {
+		font-size: 36px;
+		color: #629c9c;
+	}
+	h3 {
+		font-size: 28px;
+		line-height: 1.4;
+		font-family: "Cabin",sans-serif;
+		color: #153167;
 	}
 	h5 b a {
 		margin-top: 25px;
