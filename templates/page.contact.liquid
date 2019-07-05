@@ -18,7 +18,8 @@
 <section class="map-form-container">
   <div class="wrapper">
     <div class="map">
-      <img src="../assets/p4lmap.png" alt="Map of Pharmacy for Life location" class="map" />
+      <img src="{{ 'p4lmap.png' | asset_img_url: 'x475' }}" alt="Map of Pharmacy for Life location" class="map" />
+
     </div>
     <div class="form">
       <h2>Or Send us a Note</h2>
@@ -39,7 +40,7 @@
         <label for="ContactFormMessage" class="label--hidden">{{ 'contact.form.message' | t }}</label>
         <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
 
-        <input type="submit" class="form-btn btn-primary right" value="{{ 'contact.form.send' | t }}">
+        <input type="submit" class="form-btn btn-primary" value="{{ 'contact.form.send' | t }}">
 
       {% endform %}
     </div>

@@ -142,6 +142,7 @@
     .grid-uniform {
       display: flex;
       justify-content: flex-start;
+      padding-bottom: 50px;
       .grid__item {
         min-width: 20%;
         position: relative;
