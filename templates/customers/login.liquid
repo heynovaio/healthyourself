@@ -36,10 +36,10 @@
           {% endif %}
 
           <div class="buttons">
+            <input type="submit" class="btn-secondary" value="{{ 'customer.login.sign_in' | t }}">
             <div class="btn-primary">
               {{ 'layout.customer.create_account' | t | customer_register_link }}
             </div>
-            <input type="submit" class="btn-secondary" value="{{ 'customer.login.sign_in' | t }}">
           </div>
 
           <a href="{{ shop.url }}">{{ 'customer.login.cancel' | t }}</a>

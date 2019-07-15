@@ -40,14 +40,14 @@
         {% if search.results_count == 0 %}
 
           <div class="section-header section-header--large">
-            <h1 class="section-header__title h2">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+            <h1 class="section-header__title h1">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
           </div>
           {% include 'search-bar' %}
 
         {% else %}
 
           <div class="section-header section-header--large">
-            <h1 class="section-header__title h2">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+            <h1 class="section-header__title h1">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
           </div>
           {% include 'search-bar' %}
 
@@ -92,7 +92,7 @@
         Be sure to show a search form here, along with anything else you want to showcase.
       {% endcomment %}
       <div class="section-header section-header--large">
-        <h1 class="section-header__title h2">{{ 'general.search.title' | t }}</h1>
+        <h1 class="section-header__title h1">{{ 'general.search.title' | t }}</h1>
       </div>
       {% include 'search-bar' %}
 

@@ -37,7 +37,7 @@ h2.section-header__title {
   padding-top: 80px;
   margin-bottom: 30px;
   z-index: 1;
-  .h1 {
+  .hero {
     position: relative;
     z-index: 1;
     @media (min-width: 1087px){
@@ -64,13 +64,6 @@ h2.section-header__title {
       }
     }
   }
-  .search-bar-heading {
-    font-size: 22px;
-    font-weight: 600;
-    position: absolute;
-    background: #f3f4f7;
-    padding: 13px 18px 15px;
-  }
   .tagline {
     max-width: 450px;
     font-size: 22px;
@@ -79,27 +72,9 @@ h2.section-header__title {
     line-height: 1.5;
     margin-bottom: 20px;
   }
-}
-.top-banner .search-bar input[type="search"] {
-  border: 1px solid #ccc;
-  font-size: 20px;
-  padding: 12px 15px 13px 240px;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  border-right: 0;
-}
-.search-bar {
-  max-width: 710px;
-}
-.search-bar button.btn.icon-fallback-text {
-  height: auto;
-  padding: 8px 16px 6px;
-  background-color: #2d4276;
-  color: #fff;
-  &:hover {
-  	background-color: #ffcd2f;
-	  color: #2d4276;
+  .icon.search {
+    font-size: 25px;
+    margin-left: 0;
   }
 }
 .featured-products {

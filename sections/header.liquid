@@ -98,31 +98,20 @@
               {% endif %}
             </ul>
           {% endif %}{% endcomment %}
-          <span class="icon icon-search" aria-hidden="true" wiid="N61" style="
-            font-size: 26px;
-            /* margin-top: 5px; */
-            display: inline-block;
-            vertical-align: middle;
-            padding-bottom: 5px;
-            margin-left: 25px;
-        "></span>
-          <span class="icon icon-admin" aria-hidden="true" wiid="N61" style="
-            font-size: 26px;
-            /* margin-top: 5px; */
-            display: inline-block;
-            vertical-align: middle;
-            padding-bottom: 5px;
-            margin-left: 25px;
-        "><a href="/account"><i class="fas fa-user" wiid="C324"></i></a></span>
+          <span class="icon search">
+            <a href="/search"><i class="fas fa-search" title="Search"></i></a>
+          </span>
+          <span class="icon icon-admin">
+            <a href="/account"><i class="fas fa-user-circle" title="User"></i></a>
+          </span>
 
           <div class="header-bar__module cart-container">
-            <span class="header-bar__sep" aria-hidden="true"></span>
             <a href="/cart" class="cart-page-link">
               <span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
-            </a>
-            <a href="/cart" class="cart-page-link">
-              {{ 'layout.cart.title' | t }}{% unless cart.item_count == 0 %}:{% endunless %}
-              <span class="cart-count header-bar__cart-count{% if cart.item_count == 0 %} hidden-count{% endif %}">{{ cart.item_count }}</span>
+              <span>
+                {{ 'layout.cart.title' | t }}{% unless cart.item_count == 0 %}:{% endunless %}
+                <span class="cart-count header-bar__cart-count{% if cart.item_count == 0 %} hidden-count{% endif %}">{{ cart.item_count }}</span>
+              </span>
             </a>
           </div>
 

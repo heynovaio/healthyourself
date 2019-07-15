@@ -2,87 +2,66 @@
 
 <div class="wrapper">
 
-  <div class="grid-uniform">
-    <div class="footer-map">
-      <img class="footer-map" src="../assets/map.png">
+  {% if settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_google_plus_link != blank or settings.social_instagram_link != blank or settings.social_snapchat_link != blank or settings.social_tumblr_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank or settings.social_fancy_link != blank or settings.social_rss_link != blank %}
+    {% assign show_social_icons = true %}
+  {% else %}
+    {% assign show_social_icons = false %}
+  {% endif %}
+
+  <div>
+  {% for block in section.blocks %}
+    {% case block.type %}
+
+    {% when 'text' %}
+    <div class="col-2-container">
+      <div class="contact col">
+        <div class="footer-map">
+          <img src="{{ 'nb_cutout.jpg' | asset_img_url: 'x475' }}" alt="Map of Pharmacy for Life location" class="map" />
+        </div>
+        <div>
+          <h3 class="h4">{{ block.settings.title | escape }}</h3>
+          {{ block.settings.richtext }}
+
+          {% when 'social' %}
+          <div class="social">
+            <h3 class="h4">{{ 'layout.footer.social_title' | t }}</h3>
+            {% comment %}
+              Loop through the social network links
+            {% endcomment %}
+            {% include 'social-links' %}
+          </div>
+        </div>
+      </div>
+
+      {% when 'newsletter' %}
+      <div class="col">
+        <div class="newsletter">
+          <h3 class="h4">{{ 'layout.footer.newsletter_title' | t }}</h3>
+          <p>{{ 'layout.footer.newsletter_caption' | t }}</p>
+          {% include 'newsletter-form' %}
+        </div>
+      </div>
     </div>
 
-    {% if settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_google_plus_link != blank or settings.social_instagram_link != blank or settings.social_snapchat_link != blank or settings.social_tumblr_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank or settings.social_fancy_link != blank or settings.social_rss_link != blank %}
-      {% assign show_social_icons = true %}
-    {% else %}
-      {% assign show_social_icons = false %}
-    {% endif %}
+    {% when 'menu' %}
+    <div class="full">
+      <ul class="site-footer__links{% if num_columns == 1 %} inline-list{% endif %}">
+        {% for link in linklists[block.settings.menu].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
 
-    {% case section.blocks.size %}
-      {% when 0 %}
-      {% when 1 %}
-        {% assign column_width = 'text-center' %}
-        {%- assign article_width = 480 -%}
-      {% when 2 %}
-        {% assign column_width = 'post-large--one-half medium--one-half' %}
-        {%- assign article_width = 480 -%}
-      {% when 3 %}
-        {% assign column_width = 'post-large--one-third medium--one-third' %}
-        {%- assign article_width = 435 -%}
-      {% when 4 %}
-        {% assign column_width = 'post-large--one-quarter medium--one-half' %}
-        {%- assign article_width = 410 -%}
-      {% when 5 %}
-        {% assign column_width = 'post-large--one-fifth medium--one-half' %}
-        {%- assign article_width = 335 -%}
-      {% when 6 %}
-        {% assign column_width = 'post-large--one-sixth medium--one-half' %}
-        {%- assign article_width = 335 -%}
     {% endcase %}
+  {% endfor %}
 
-    {% for block in section.blocks %}
-      {% case block.type %}
-
-        {% when 'contact' %}
-          <div class="grid__item {{ column_width }}">
-            {% unless num_columns == 1 %}
-            <h3 class="h4">{{ block.settings.menu_title | escape }}</h3>
-            {% endunless %}
-            <div class="map">
-              <div class="contact-details"
-            </div>
-          </div>
-
-
-        {% when 'menu' %}
-          <div class="grid__item {{ column_width }}">
-            {% unless num_columns == 1 %}
-            <h3 class="h4">{{ block.settings.menu_title | escape }}</h3>
-            {% endunless %}
-            <ul class="site-footer__links{% if num_columns == 1 %} inline-list{% endif %}">
-              {% for link in linklists[block.settings.menu].links %}
-                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-
-            {% when 'social' %}
-            <div class="grid__item {{ column_width }}">
-            <div class="social">
-              <h3 class="h4">{{ 'layout.footer.social_title' | t }}</h3>
-              {% comment %}
-                Loop through the social network links
-              {% endcomment %}
-              {% include 'social-links' %}
-            </div>
-
-            {% when 'newsletter' %}
-            <h3 class="h4">{{ 'layout.footer.newsletter_title' | t }}</h3>
-            <p>{{ 'layout.footer.newsletter_caption' | t }}</p>
-            {% include 'newsletter-form' %}
-
-          </div>
-
-      {% endcase %}
-    {% endfor %}
   </div>
 
-  <hr class="hr--small hr--clear">
+  <div class="grid">
+    <div class="grid__item text-center">
+      <p class="site-footer__links">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</p>
+    </div>
+  </div>
 
   {% if section.settings.show_methods_of_payment %}
     {% unless shop.enabled_payment_types == empty %}
@@ -105,11 +84,7 @@
     </div>
     {% endunless %}
   {% endif %}
-  <div class="grid">
-    <div class="grid__item text-center">
-      <p class="site-footer__links">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</p>
-    </div>
-  </div>
+
 </div>
 
 </footer>

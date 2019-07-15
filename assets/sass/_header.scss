@@ -152,12 +152,36 @@ body .site-nav > li .site-nav__dropdown {
 
 .cart-container {
   background: $brandSecondary;
-  padding: 11px 25px 11px 20px;
-  margin: -2px 0 -8px 20px;
+  margin: -2px 0 -8px 14px;
   font-size: 18px;
   a {
   	color: #fff;
+  	padding: 17px 25px 14px 25px;
+  	text-transform: none;
+  	letter-spacing: 0.025em;
   }
+  .icon {
+  	display: inline-block;
+    vertical-align: top;
+    margin-top: -3px;
+    font-size: 1.3rem;
+  }
+}
+.icon.search,
+.icon-admin {
+	font-size: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  a {
+  	vertical-align: middle;
+    padding: 5px 8px 0;
+    display: inline-block;
+  }
+}
+.icon.search {
+	margin-left: 12px;
+	font-size: 23px;
 }
 .header-bar {
   padding: 19px 20px;
