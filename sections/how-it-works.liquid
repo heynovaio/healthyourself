@@ -7,7 +7,11 @@
       <div class="col-3">
       	{% for block in section.blocks %}
       		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-	      	<div class="inner-col">
+
+          <a class="inner-col" href="{{ block.settings.ServicesUrl | escape }}">
+            <div class="services-container">
+
+
             <div class="img-container">
               <div class="icon-img">
                 <img src="{{ block.settings.stepImage | img_url: '300x300' }}"
@@ -18,7 +22,8 @@
             <h3 class="text-heading">{{ block.settings.stepTitle | escape }}</h3>
             <p>{{ block.settings.stepCopy | escape }}</p>
             {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
-			    </div>
+            </div>
+			    </a>
 				{% endfor %}
 	    </div>
 	  </div>
@@ -73,6 +78,11 @@
 		        "label": "Step Text",
 		        "default": "Text stuff"
 		      }
+          {
+            "type": "url",
+            "id": "ServicesUrl",
+            "label": "How-it-works URL"
+          }
         ]
       }
     ],
