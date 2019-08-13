@@ -6,9 +6,12 @@
 		.motto-section {
 			p {
 				padding: 0 20px;
+				@media (max-width: 800px){
+					padding: 0;
+				}
 			}
 		}
-}
+	}
 	.staff {
 		padding: 40px 0;
 		text-align: center;
@@ -17,15 +20,18 @@
 				margin-bottom: 50px;
 			}
 		}
-			.staff-name {
-				font-weight: 700;
-				font-size: 24px;
-				margin-top: 20px;
-				margin-bottom: 0px;
+		.staff-name {
+			font-weight: 700;
+			font-size: 24px;
+			margin-top: 20px;
+			margin-bottom: 0px;
+		}
+		p {
+			padding: 0px 20px 0px 20px;
+			@media (max-width: 800px){
+				padding: 0;
 			}
-			p {
-				padding: 0px 20px 0px 20px;
-			}
+		}
 	}
 	.motto-section {
 		padding-bottom: 50px;
@@ -45,6 +51,9 @@
 		font-size: 18px;
 		margin-bottom: 20px;
 		padding: 0px 50px 0px 50px;
+		@media (max-width: 800px){
+			padding: 0;
+		}
 	}
 	p.subtitle {
 		font-size: 28px;
@@ -87,15 +96,21 @@
 }
 .community {
 	background-color: #f3f4f7;
-	padding: 40px 0;
+	padding: 30px 0;
+	@media (max-width: 800px){
+		padding-top: 0;
+	}
 	.content-tac {
 		margin: 0 auto;
-		max-width: 700px;
+		max-width: 720px;
 		text-align: center;
 	}
 	.feature-row__text {
     padding-top: 20px;
-}
+	}
+	.featured-row__subtext {
+		padding-bottom: 20px;
+	}
 }
 
 .staff {
@@ -113,24 +128,25 @@
 	    -o-align-items: center;
 	    align-items: flex-start;
 			flex-wrap: wrap;
+			.inner-col {
+				width: 100%;
+				text-align: center;
+				flex: 1;
+				max-width: 50%;
+				min-width: 40%;
+				padding: 30px 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.staff-boxes {
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+			}
 		}
 	}
-	.inner-col {
-		width: 100%;
-		text-align: center;
-		flex: 1;
-		max-width: 50%;
-		min-width: 40%;
-		padding: 30px 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.staff-boxes {
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	}
+
 	p {
 		max-width: 600px;
 	}

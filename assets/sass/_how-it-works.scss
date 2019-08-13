@@ -6,11 +6,21 @@
 .how-it-works {
     text-align: center;
     padding: 80px 10px;
+    @media (max-width: 940px){
+      padding: 50px 0 80px;
+    }
     .col-3 {
+      padding: 20px 0 40px;
       .inner-col {
         box-shadow: -1px 5px 20px 0 rgba(215,216,218,0.38);
         color: #333;
         padding: 40px 20px;
+        margin: 0 20px;
+        transition: .25s margin;
+        @media (max-width: 940px){
+          margin: 0 0 20px;
+          padding: 40px 20px;
+        }
         &:hover {
           margin-top: -5px;
           margin-bottom: 5px;
@@ -27,6 +37,9 @@
           display: flex;
   	       flex: 1 0 auto;
   	        flex-direction: column;
+        }
+        @media only screen and (max-width: 1045px){
+
         }
       }
     }

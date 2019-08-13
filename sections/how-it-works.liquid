@@ -8,7 +8,7 @@
       	{% for block in section.blocks %}
       		{%- assign img_url = block.settings.stepImage | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-          <a class="inner-col" href="{{ block.settings.ServicesUrl | escape }}">
+          <a class="inner-col" href="{{ block.settings.servicesUrl | escape }}">
             <div class="services-container">
 
 
@@ -77,10 +77,10 @@
 		        "id": "stepCopy",
 		        "label": "Step Text",
 		        "default": "Text stuff"
-		      }
+		      },
           {
             "type": "url",
-            "id": "ServicesUrl",
+            "id": "servicesUrl",
             "label": "How-it-works URL"
           }
         ]

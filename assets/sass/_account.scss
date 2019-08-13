@@ -33,6 +33,9 @@
 	}
 	main form {
     padding: 0 100px;
+    @media (max-width: 800px){
+			padding: 0;
+		}
 	}
 	.section-header {
 		text-align: center;
@@ -43,7 +46,7 @@
 	}
 	main .wrapper {
 		max-width: 900px;
-		padding: 50px 0 100px;
+		padding: 50px 20px 100px;
 	}
 	@media only screen and (min-width: 1250px){
 		.wide--one-third {

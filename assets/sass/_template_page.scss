@@ -287,3 +287,31 @@ ul.pagination-custom {
     }
 	}
 }
+
+#prescriptions {
+  p + a {
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #153167;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 22px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.010em;
+    border-radius: 2px;
+    line-height: 1.42;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: "Cabin",sans-serif;
+    display: inline-block;
+    cursor: pointer;
+  }
+  p a {
+
+  }
+}

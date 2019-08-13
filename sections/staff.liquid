@@ -20,6 +20,11 @@
 			    </div>
 				{% endfor %}
 	    </div>
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn-primary">
+          {{ section.settings.button_label | escape }}
+        </a>
+      {% endif %}
 	  </div>
   </div>
 </section>
@@ -32,6 +37,16 @@
         "id": "title",
         "label": "Title",
         "default": "Heading"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Staff Url"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Staff Url name"
       }
     ],
     "blocks": [

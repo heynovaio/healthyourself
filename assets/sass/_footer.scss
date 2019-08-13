@@ -7,9 +7,16 @@
     }
     ul.site-footer__links {
       text-align: center;
-      display: flex;
-      justify-content: center;
       margin-bottom: 18px;
+      @media only screen and (min-width: 769px){
+        display: flex;
+        justify-content: center;
+        a {
+          border-right: 1px solid #fff;
+          padding-right: 16px;
+          margin-right: 16px;
+        }
+      }
       li:last-child {
         a {
           padding-right: 0;
@@ -18,9 +25,6 @@
         }
       }
       a {
-        border-right: 1px solid #fff;
-        padding-right: 16px;
-        margin-right: 16px;
         display: inline-block;
         line-height: 1;
       }
@@ -68,17 +72,24 @@
     }
   }
   .col-2-container {
-    display: flex;
+    @media only screen and (min-width: 769px){
+      display: flex;
+    }
     padding-top: 40px;
     margin-bottom: 30px;
     .col {
-      width: 50%;
+
+      @media only screen and (min-width: 769px){
+        width: 50%;
+      }
     }
     .social {
       margin-top: 30px;
     }
     .contact {
-      display: flex;
+      @media only screen and (min-width: 769px){
+        display: flex;
+      }
       img {
         margin-right: 30px;
       }
