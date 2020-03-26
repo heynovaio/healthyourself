@@ -11,7 +11,7 @@
           <a class="inner-col" href="{{ block.settings.servicesUrl | escape }}">
             <div class="services-container">
 
-
+            {% if block.settings.stepImage != blank %}
             <div class="img-container">
               <div class="icon-img">
                 <img src="{{ block.settings.stepImage | img_url: '300x300' }}"
@@ -19,6 +19,10 @@
                    alt="test">
               </div>
             </div>
+            {% endif %}
+            {% if block.settings.subTitle != blank %}
+              <span>{{ block.settings.subTitle | escape }}</span>
+            {% endif %}
             <h3 class="text-heading">{{ block.settings.stepTitle | escape }}</h3>
             <p>{{ block.settings.stepCopy | escape }}</p>
             {% comment %}<div class="subtitle">{{ block.settings.stepText | escape }}</div>{% endcomment %}
@@ -66,6 +70,11 @@
 		        "id": "stepImage",
 		        "label": "Step Graphic"
 		      },
+          {
+            "type": "text",
+            "id": "subTitle",
+            "label": "Sub Title (ex:price)"
+          },
           {
             "type": "text",
             "id": "stepTitle",
