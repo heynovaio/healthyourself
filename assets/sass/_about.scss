@@ -151,10 +151,22 @@
 		max-width: 600px;
 	}
 }
+
+.staff-boxes {
+	.img-container {
+		border-radius: 4px;
+		overflow: hidden;
+		box-shadow: -1px 5px 20px 0 rgba(109, 109, 109, 0.38);
+	}
+	img {
+		display: block;
+	}
+}
 .content-title-desc {
 	.copy-container {
 		text-align: center;
 	}
+
 	p {
 		text-align: center;
 		font-size: 18px;
@@ -183,7 +195,13 @@
 	}
 	img {
 		max-width: 100%;
+		display: block;
 	}
+	.img-container {
+	  box-shadow: -3px 5px 20px 0 rgba(109, 109, 109, 0.38);
+    border-radius: 4px;
+    overflow: hidden;
+  }
 		@media only screen and (min-width: 769px){
 			.img-container {
 				max-width: 634px;

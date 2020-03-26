@@ -34,11 +34,11 @@
         {{ form.errors | default_errors }}
 
         {% assign name_attr = 'contact.form.name' | t | handle %}
-        <label for="ContactFormEmail" class="label--hidden">{{ 'contact.form.email' | t }}</label>
-        <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+        <label for="ContactFormEmail" class="label">{{ 'contact.form.email' | t }}</label>
+        <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="email@example.com" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
 
-        <label for="ContactFormMessage" class="label--hidden">{{ 'contact.form.message' | t }}</label>
-        <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        <label for="ContactFormMessage" class="label">{{ 'contact.form.message' | t }}</label>
+        <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Type your message here">{% if form.body %}{{ form.body }}{% endif %}</textarea>
 
         <input type="submit" class="form-btn btn-primary" value="{{ 'contact.form.send' | t }}">
 

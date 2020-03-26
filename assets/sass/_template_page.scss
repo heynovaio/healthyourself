@@ -166,6 +166,8 @@
         }
         .item-container {
           box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
+          border-radius: 2px;
+          overflow: hidden;
         }
         .grid-link {
           height: 100%;
@@ -213,7 +215,10 @@ h1.section-header__title.section-header__title--left {
 }
 
 /* pagination styling */
-
+.pagination-container {
+  width: 100%;
+  padding: 50px 0 70px;
+}
 ul.pagination-custom {
   font-weight: 600;
   font-size: 20px;
@@ -307,4 +312,8 @@ ul.pagination-custom {
   p a {
 
   }
+}
+
+#related-products-section .grid-uniform {
+  justify-content: center;
 }

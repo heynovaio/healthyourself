@@ -2,11 +2,10 @@
   {% paginate customer.addresses by 5 %}
   <div class="section-header section-header--large">
     <h1 class="section-header__title section-header__title--left">{{ 'customer.account.title' | t }}</h1>
-    <div class="section-header__link--right">
-      <a href="#" class="btn-secondary" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.add_new' | t }}</a>
-    </div>
   </div>
-
+  <div class="section-header__link--right">
+    <a href="#" class="btn-secondary" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.add_new' | t }}</a>
+  </div>
   <p><a href="/account">{{ 'customer.account.return' | t }}</a></p>
 
   {% comment %}

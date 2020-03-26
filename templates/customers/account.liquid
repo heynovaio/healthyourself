@@ -1,6 +1,11 @@
 <div class="wrapper">
   <div class="section-header section-header--large">
     <h1 class="section-header__title">{{ 'customer.account.title' | t }}</h1>
+
+    <div class="btn-primary btn-logout">
+      {{ 'layout.customer.log_out' | t | customer_logout_link }}
+    </div>
+
   </div>
 
   <div class="wrapper grid">
@@ -60,15 +65,11 @@
     <div class="grid__item one-third medium-down--one-whole">
       <h2 class="h4">{{ 'customer.account.details' | t }}</h2>
 
-      <span class="h5">{{ customer.name }}</span>
+      <span class="h5">{{ customer.email }}</span>
 
       {{ customer.default_address | format_address }}
 
       <p><a href="/account/addresses">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
-    </div>
-
-    <div class="btn-primary btn-logout">
-      {{ 'layout.customer.log_out' | t | customer_logout_link }}
     </div>
 
 

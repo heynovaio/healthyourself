@@ -189,7 +189,9 @@ p.grid-link__meta::first-letter {
   position: relative;
   text-align: right;
   background: #fff;
-  box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
+  box-shadow: -3px 10px 26px 4px rgba(169, 167, 167, 0.21);
+  border-radius: 2px;
+  overflow: hidden;
 }
 .buy-container {
 	position: absolute;

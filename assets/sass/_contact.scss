@@ -1,4 +1,12 @@
 #contact-us {
+	.content-title-desc	.img-container {
+	  box-shadow: -3px 5px 20px 0 rgba(109, 109, 109, 0.38);
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+    	display: block;
+    }
+  }
 	@media only screen and (min-width: 769px){
 		.content-title-desc .img-container {
 			margin-right: 50px;
@@ -95,6 +103,8 @@
 			.inner-col {
 				background: #fff;
 				box-shadow: -1px 5px 20px 0 rgba(215, 216, 218, 0.38);
+				border-radius: 2px;
+    		overflow: hidden;
 				img {
 	    	max-height: 80px;
 			}

@@ -73,17 +73,16 @@
 
         {% endfor %}
 
+        {% if paginate.pages > 1 %}
+          <div class="text-center pagination-container">
+            {% include 'pagination-custom' %}
+          </div>
+        {% endif %}
+
       </div>
     </div>
 
 
-    {% if paginate.pages > 1 %}
-      <hr class="hr--clear">
-
-      <div class="text-center">
-        {% include 'pagination-custom' %}
-      </div>
-    {% endif %}
   </div>
 </div>
 {% endpaginate %}
