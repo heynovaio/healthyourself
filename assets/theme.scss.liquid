@@ -2650,23 +2650,28 @@ input[type="submit"].password-page__signup-form__submit {
   text-align: center;
   box-shadow: -1px 5px 20px 0 rgba(21, 49, 103, 0.2);
 }
-#shopify-section-1585176883918 {
-  .how-it-works {
+
+  .memberships {
     .col-3 {
     align-items: flex-start;
     }
     .inner-col {
-      padding: 0;
+      padding: 0 !important;
       .services-container {
         opacity: 0.5;
           span, .text-heading {
              background-color: #153167;
              margin-top: 0;
           }
-          span {
+          .subtitle {
           padding: 30px 0 10px;
           color: #fff;
           font-weight: 600;
+          }
+          .extra-text {
+          color: #fff;
+          font-weight: 600;
+          padding-bottom: 10px;
           }
           .text-heading {
           color: #77e4e4;
@@ -2679,12 +2684,12 @@ input[type="submit"].password-page__signup-form__submit {
       }
     }
   }
-}
-#shopify-section-1585176883918 .inner-col:nth-child(2) .services-container{
+
+.memberships .inner-col:nth-child(2) .services-container{
   background-color: #153167;
   opacity: 1;
   color: #fff;
-  span {
+  .subtitle {
     text-decoration: line-through;
   }
   .text-heading {

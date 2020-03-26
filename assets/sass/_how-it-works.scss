@@ -12,6 +12,11 @@ body#how-it-works .img-container {
 .how-it-works {
   text-align: center;
   padding: 80px 10px;
+  p {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
     @media (max-width: 940px){
       padding: 50px 0 80px;
     }
