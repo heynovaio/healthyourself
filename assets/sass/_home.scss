@@ -34,7 +34,10 @@ h2.section-header__title {
   margin-bottom: 30px;
   z-index: 1;
   @media (max-width: 769px){
-     padding-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    background: #b0cece;
   }
   .hero {
     position: relative;
